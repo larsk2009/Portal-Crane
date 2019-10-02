@@ -22,6 +22,8 @@
 #include "xil_printf.h"
 #endif
 
+#include "MotorDriver/MotorDriver.h"
+
 /************************** Constant Definitions *****************************/
 /*
  * The following constants map to the XPAR parameters created in the
@@ -40,7 +42,7 @@
 #define INTC_HANDLER            XScuGic_InterruptHandler
 #endif /* XPAR_INTC_0_DEVICE_ID */
 
-#define PWM_PERIOD              66000    /* PWM period in (500 ms) */
+#define PWM_PERIOD              66000    	 /* PWM period in (500 ms) */
 #define TMRCTR_0                0            /* Timer 0 ID */
 #define TMRCTR_1                1            /* Timer 1 ID */
 #define CYCLE_PER_DUTYCYCLE     10           /* Clock cycles per duty cycle */
@@ -75,7 +77,16 @@ int main(void)
 {
 	int Status;
 
-	/* Run the Timer Counter PWM example */
+	InitializeMotorDriver(50.0, 15000);
+
+	while(1) {
+		sleep(1);
+		DriveMotor(10);
+		sleep(1);
+		DriveMotor(90);
+	}
+
+	/* Run the Timer Counter PWM example
 	Status = TmrCtrPwmExample(&TimerCounterInst, TMRCTR_DEVICE_ID);
 	if (Status != XST_SUCCESS) {
 		xil_printf("Tmrctr PWM Example Failed\r\n");
@@ -83,7 +94,7 @@ int main(void)
 	}
 
 	xil_printf("Successfully ran Tmrctr PWM Example\r\n");
-	return XST_SUCCESS;
+	return XST_SUCCESS;*/
 }
 
 /*****************************************************************************/
