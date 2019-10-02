@@ -1,0 +1,200 @@
+/*
+ * test.c
+ *
+ *  Created on: 2 okt. 2019
+ *      Author: Mark Wolvers
+ */
+/*
+ * test.c
+ *
+ *  Created on: 2 okt. 2019
+ *      Author: Mark Wolvers
+ */
+#include "xtmrctr.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+#include "xintc.h"
+#include <stdio.h>
+#else
+#include "xscugic.h"
+#include "xil_printf.h"
+#endif
+
+/************************** Constant Definitions *****************************/
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are only defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define TMRCTR_DEVICE_ID        XPAR_TMRCTR_0_DEVICE_ID
+
+#ifdef __MICROBLAZE__
+#define TMRCTR_INTERRUPT_ID     XPAR_INTC_0_TMRCTR_0_VEC_ID
+#else
+#define TMRCTR_INTERRUPT_ID     XPAR_FABRIC_TMRCTR_0_VEC_ID
+#endif
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+#define INTC_DEVICE_ID          XPAR_INTC_0_DEVICE_ID
+#define INTC                    XIntc
+#define INTC_HANDLER            XIntc_InterruptHandler
+#else
+#define INTC_DEVICE_ID          XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define INTC                    XScuGic
+#define INTC_HANDLER            XScuGic_InterruptHandler
+#endif /* XPAR_INTC_0_DEVICE_ID */
+
+#define PWM_PERIOD              33000    /* PWM period in (500 ms) */
+#define TMRCTR_0                0            /* Timer 0 ID */
+#define TMRCTR_1                1            /* Timer 1 ID */
+#define CYCLE_PER_DUTYCYCLE     10           /* Clock cycles per duty cycle */
+#define MAX_DUTYCYCLE           100          /* Max duty cycle */
+#define DUTYCYCLE_DIVISOR       50            /* Duty cycle Divisor */
+#define WAIT_COUNT              PWM_PERIOD   /* Interrupt wait counter */
+
+/**************************** Type Definitions *******************************/
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+/************************** Function Prototypes ******************************/
+int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *InstancePtr, u16 DeviceId, u16 IntrId);
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr, XTmrCtr *InstancePtr, u16 DeviceId, u16 IntrId);
+static void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId);
+
+/************************** Variable Definitions *****************************/
+INTC InterruptController;  /* The instance of the Interrupt Controller */
+XTmrCtr TimerCounterInst;  /* The instance of the Timer Counter */
+
+/*
+ * The following variables are shared between non-interrupt processing and
+ * interrupt processing such that they must be global.
+ */
+static int   PeriodTimerHit = FALSE;
+static int   HighTimerHit = FALSE;
+
+/*****************************************************************************/
+/**
+* This function is the main function of the Tmrctr PWM example.
+*
+* @param	None.
+*
+* @return	XST_SUCCESS to indicate success, else XST_FAILURE to indicate a
+*		Failure.
+*
+* @note		None.
+*
+******************************************************************************/
+int main(void)
+{
+	int Status;
+
+	/* Run the Timer Counter PWM example */
+	Status = TmrCtrPwmExample(&InterruptController, &TimerCounterInst, TMRCTR_DEVICE_ID, TMRCTR_INTERRUPT_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Tmrctr PWM Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran Tmrctr PWM Example\r\n");
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+* This function demonstrates the use of tmrctr PWM APIs.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_INTERRUPT_INTR
+*		value from xparameters.h
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE
+*
+* @note		none.
+*
+*****************************************************************************/
+int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr, u16 DeviceId, u16 IntrId)
+{
+	u8  DutyCycle;
+	u8  NoOfCycles;
+	u8  Div;
+	u32 Period;
+	u32 HighTime;
+	u64 WaitCount;
+	int Status;
+
+	/*
+	 * Initialize the timer counter so that it's ready to use,
+	 * specify the device ID that is generated in xparameters.h
+	 */
+	Status = XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId);
+	if (Status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built
+	 * correctly. Timer0 is used for self test
+	 */
+	Status = XTmrCtr_SelfTest(TmrCtrInstancePtr, TMRCTR_0);
+	if (Status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	/*
+	 * We start with the fixed divisor and after every CYCLE_PER_DUTYCYCLE
+	 * decrement the divisor by 1, as a result Duty cycle increases
+	 * proportionally. This is done until duty cycle is reached upto
+	 * MAX_DUTYCYCLE
+	 */
+	Div = DUTYCYCLE_DIVISOR;
+
+	/* Configure PWM */
+	do
+	{
+		/* Disable PWM for reconfiguration */
+		XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+		/* Configure PWM */
+		Period = PWM_PERIOD;
+		HighTime = PWM_PERIOD / Div--;
+		DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
+		if (Status != XST_SUCCESS)
+		{
+			Status = XST_FAILURE;
+			goto err;
+		}
+
+		xil_printf("PWM Configured for Duty Cycle = %d\r\n", DutyCycle);
+
+		/* Enable PWM */
+		XTmrCtr_PwmEnable(TmrCtrInstancePtr);
+
+		NoOfCycles = 0;
+		WaitCount = WAIT_COUNT;
+		while (NoOfCycles < CYCLE_PER_DUTYCYCLE)
+		{
+			if (PeriodTimerHit == TRUE && HighTimerHit == TRUE)
+			{
+				PeriodTimerHit = FALSE;
+				HighTimerHit = FALSE;
+				WaitCount = WAIT_COUNT;
+				NoOfCycles++;
+			}
+
+			/* Interrupt did not occur as expected */
+			if (!(--WaitCount)) {
+				return XST_FAILURE;
+			}
+		}
+	} while (DutyCycle < MAX_DUTYCYCLE);
+
+	Status = XST_SUCCESS;
+}

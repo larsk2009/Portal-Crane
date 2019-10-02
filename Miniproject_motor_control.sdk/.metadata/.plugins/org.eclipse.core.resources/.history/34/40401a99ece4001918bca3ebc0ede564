@@ -1,0 +1,36 @@
+/*
+ * motor_test.c
+ *
+ *  Created on: 2 okt. 2019
+ *      Author: Mark Wolvers
+ */
+
+/* Include Files */
+#include "modulator_axi_ip.h"
+#include "xparameters.h"
+#include "stdio.h"
+#include "xil_io.h"
+
+/************************** Constant Definitions ***************************/
+#define READ_WRITE_MUL_FACTOR 0x10
+#define SW0 0
+#define DIV_FACTOR_FREQHIGH 4
+#define DIV_FACTOR_FREQLOW 8
+#define MODULATOR_AXI_IP_S00_AXI_SLV_REG3_OFFSET 12
+
+/* Main function. */
+int main(void)
+{
+
+	xil_printf("******************************\n\r");
+	xil_printf("* User Peripheral Self Test\n\r");
+	xil_printf("******************************\n\n\r");
+
+	MODULATOR_AXI_IP_mWriteReg(0x41200000, SW0, 0x0);
+
+	MODULATOR_AXI_IP_mWriteReg(0x41200000, DIV_FACTOR_FREQLOW, 0x0);
+
+	MODULATOR_AXI_IP_mWriteReg(0x41200000, DIV_FACTOR_FREQHIGH, 0x0);
+
+	return XST_SUCCESS;
+}

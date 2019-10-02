@@ -1,0 +1,23 @@
+10:53:04 **** Auto Build of configuration Debug for project motor_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/motor_test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/motor_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/motor_test.d" -MT"src/motor_test.o" -o "src/motor_test.o" "../src/motor_test.c"
+'Finished building: ../src/motor_test.c'
+' '
+'Building target: motor_control.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_control_bsp/ps7_cortexa9_0/lib -o "motor_control.elf"  ./src/modulator_axi_ip.o ./src/modulator_axi_ip_selftest.o ./src/motor_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_control.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_control.elf  |tee "motor_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22756	   1144	  22568	  46468	   b584	motor_control.elf
+'Finished building: motor_control.elf.size'
+' '
+
+10:53:05 Build Finished (took 1s.541ms)
+

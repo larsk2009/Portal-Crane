@@ -1,0 +1,30 @@
+/*
+ * motor_test.c
+ *
+ *  Created on: 2 okt. 2019
+ *      Author: Mark Wolvers
+ */
+
+/* Include Files */
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xil_printf.h"
+#include "modulator_axi_ip.h"
+
+/************************** Constant Definitions ***************************/
+#define READ_WRITE_MUL_FACTOR 0x10
+
+/* Main function. */
+int main(void)
+{
+	int write_loop_index;
+	int read_loop_index;
+
+	xil_printf("******************************\n\r");
+	xil_printf("* User Peripheral Self Test\n\r");
+	xil_printf("******************************\n\n\r");
+
+	xil_Out32(0x41200000, 0x0);
+
+	return XST_SUCCESS;
+}

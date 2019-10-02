@@ -1,0 +1,45 @@
+/*
+ * motor_test.c
+ *
+ *  Created on: 2 okt. 2019
+ *      Author: Mark Wolvers
+ */
+
+/* Include Files */
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+#include "xil_printf.h"
+#include "modulator_axi_ip.h"
+
+/* Main function. */
+int main(void)
+{
+	u32 baseaddr;
+	int write_loop_index;
+	int read_loop_index;
+	int Index;
+
+	baseaddr = (u32) baseaddr_p;
+
+	xil_printf("******************************\n\r");
+	xil_printf("* User Peripheral Self Test\n\r");
+	xil_printf("******************************\n\n\r");
+
+	/*
+	 * Write to user logic slave module register(s) and read back
+	 */
+	xil_printf("User logic slave module test...\n\r");
+
+	for (write_loop_index = 0 ; write_loop_index < 4; write_loop_index++)
+		MODULATOR_AXI_IP_mWriteReg (baseaddr, write_loop_index*4, (write_loop_index+1)*READ_WRITE_MUL_FACTOR);
+	for (read_loop_index = 0 ; read_loop_index < 4; read_loop_index++)
+		if ( MODULATOR_AXI_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+			xil_printf ("Error reading register value at address %x\n", (int)baseaddr + read_loop_index*4);
+			return XST_FAILURE;
+		}
+
+	xil_printf("   - slave register write/read passed\n\n\r");
+
+	return XST_SUCCESS;
+}
