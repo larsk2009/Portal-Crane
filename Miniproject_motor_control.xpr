@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.xpr">
+<Project Version="7" Minor="38" Path="F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="ced6371202ea49c3a1632312daf2414e"/>
@@ -68,20 +68,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0.xci">
-          <Proxy FileSetName="Block_design_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="Block_design_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_xbar_0/Block_design_xbar_0.xci">
-          <Proxy FileSetName="Block_design_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_axi_timer_0_0/Block_design_axi_timer_0_0.xci">
+          <Proxy FileSetName="Block_design_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_processing_system7_0_0/Block_design_processing_system7_0_0.xci">
           <Proxy FileSetName="Block_design_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_axi_timer_0_0/Block_design_axi_timer_0_0.xci">
-          <Proxy FileSetName="Block_design_axi_timer_0_0"/>
+        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="Block_design_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0.xci">
+          <Proxy FileSetName="Block_design_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Block_design.bd" FileRelPathName="ip/Block_design_xbar_0/Block_design_xbar_0.xci">
+          <Proxy FileSetName="Block_design_xbar_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Block_design/hdl/Block_design_wrapper.v">
@@ -343,7 +343,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="model_cra_ip"/>
+        <Option Name="TopModule" Val="Block_design_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
@@ -448,9 +448,7 @@
     </Run>
     <Run Id="Block_design_axi_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="Block_design_axi_timer_0_0" Part="xc7z010clg400-1" ConstrsSet="Block_design_axi_timer_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Block_design_axi_timer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -540,9 +538,7 @@
     </Run>
     <Run Id="Block_design_axi_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Block_design_axi_timer_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="Block_design_axi_timer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

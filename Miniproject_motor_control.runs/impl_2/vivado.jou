@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct  2 15:03:04 2019
-# Process ID: 20740
-# Current directory: D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.runs/impl_2
+# Start of session at: Wed Oct  2 18:41:01 2019
+# Process ID: 25488
+# Current directory: F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2
 # Command line: vivado.exe -log Block_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Block_design_wrapper.tcl -notrace
-# Log file: D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.runs/impl_2/Block_design_wrapper.vdi
-# Journal file: D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.runs/impl_2\vivado.jou
+# Log file: F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2/Block_design_wrapper.vdi
+# Journal file: F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2\vivado.jou
 #-----------------------------------------------------------
 source Block_design_wrapper.tcl -notrace

@@ -17,7 +17,8 @@ src/test.o src/test.o: ../src/test.c \
  ../../motor_test_bsp/ps7_cortexa9_0/include/xscugic.h \
  ../../motor_test_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
  ../../motor_test_bsp/ps7_cortexa9_0/include/xil_exception.h \
- ../../motor_test_bsp/ps7_cortexa9_0/include/xil_printf.h
+ ../../motor_test_bsp/ps7_cortexa9_0/include/xil_printf.h \
+ ../src/MotorDriver/MotorDriver.h
 
 ../../motor_test_bsp/ps7_cortexa9_0/include/xtmrctr.h:
 
@@ -56,3 +57,5 @@ src/test.o src/test.o: ../src/test.c \
 ../../motor_test_bsp/ps7_cortexa9_0/include/xil_exception.h:
 
 ../../motor_test_bsp/ps7_cortexa9_0/include/xil_printf.h:
+
+../src/MotorDriver/MotorDriver.h:

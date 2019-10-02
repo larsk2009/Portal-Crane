@@ -69,18 +69,18 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.cache/wt [current_project]
-  set_property parent.project_path D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.xpr [current_project]
-  set_property ip_repo_paths D:/EAAES/EAAES_coreips [current_project]
-  set_property ip_output_repo D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.cache/ip [current_project]
+  set_property webtalk.parent_dir F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.cache/wt [current_project]
+  set_property parent.project_path F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.xpr [current_project]
+  set_property ip_repo_paths F:/users/lars/Source/Repos/EAAES_coreips [current_project]
+  set_property ip_output_repo F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.runs/synth_2/Block_design_wrapper.dcp
+  add_files -quiet F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/synth_2/Block_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd
+  add_files F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd
   set_param project.isImplRun false
-  read_xdc D:/EAAES/Miniproject_motor_control/Zybo-Z7-Master.xdc
+  read_xdc F:/users/lars/Source/Repos/Portal-Crane/Zybo-Z7-Master.xdc
   set_param project.isImplRun true
   link_design -top Block_design_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
