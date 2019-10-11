@@ -2,22 +2,14 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct  2 18:37:16 2019
-# Process ID: 9544
-# Current directory: F:/users/lars/Source/Repos/Portal-Crane
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17640 F:\users\lars\Source\Repos\Portal-Crane\Miniproject_motor_control.xpr
-# Log file: F:/users/lars/Source/Repos/Portal-Crane/vivado.log
-# Journal file: F:/users/lars/Source/Repos/Portal-Crane\vivado.jou
+# Start of session at: Tue Oct  8 14:25:41 2019
+# Process ID: 3000
+# Current directory: D:/Users/larsk/Source/Portal-Crane
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14844 D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.xpr
+# Log file: D:/Users/larsk/Source/Portal-Crane/vivado.log
+# Journal file: D:/Users/larsk/Source/Portal-Crane\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.xpr
+open_project D:/Users/larsk/Source/Portal-Crane/Miniproject_motor_control.xpr
 update_compile_order -fileset sources_1
-open_bd_design {F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd}
-reset_run synth_2
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-wait_on_run impl_2
-open_run impl_2
-file copy -force F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2/Block_design_wrapper.sysdef F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
-
-launch_sdk -workspace F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk -hwspec F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
-open_bd_design {F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd}
+launch_sdk -workspace D:/Users/larsk/Source/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/Users/larsk/Source/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf

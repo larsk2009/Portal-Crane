@@ -2425,3 +2425,1000 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
+14:28:13 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/MotorDriver/MotorDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver/MotorDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/MotorDriver/MotorDriver.d" -MT"src/MotorDriver/MotorDriver.o" -o "src/MotorDriver/MotorDriver.o" "../src/MotorDriver/MotorDriver.c"
+../src/MotorDriver/MotorDriver.c: In function 'DriveMotor':
+../src/MotorDriver/MotorDriver.c:69:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+'Finished building: ../src/MotorDriver/MotorDriver.c'
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26016	   1168	  22648	  49832	   c2a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:30:58 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:31:18 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:32:12 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:32:25 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:32:41 **** Clean-only build of configuration Debug for project motor_test ****
+make clean 
+rm -rf  ./src/MotorDriver/MotorDriver.o  ./src/test.o  ./src/MotorDriver/MotorDriver.d  ./src/test.d  motor_test.elf.size  motor_test.elf
+' '
+14:32:42 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/MotorDriver/MotorDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver/MotorDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/MotorDriver/MotorDriver.d" -MT"src/MotorDriver/MotorDriver.o" -o "src/MotorDriver/MotorDriver.o" "../src/MotorDriver/MotorDriver.c"
+../src/MotorDriver/MotorDriver.c: In function 'DriveMotor':
+../src/MotorDriver/MotorDriver.c:69:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+'Finished building: ../src/MotorDriver/MotorDriver.c'
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26016	   1168	  22648	  49832	   c2a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:33:01 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/MotorDriver/MotorDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver/MotorDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/MotorDriver/MotorDriver.d" -MT"src/MotorDriver/MotorDriver.o" -o "src/MotorDriver/MotorDriver.o" "../src/MotorDriver/MotorDriver.c"
+../src/MotorDriver/MotorDriver.c: In function 'DriveMotor':
+../src/MotorDriver/MotorDriver.c:69:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+'Finished building: ../src/MotorDriver/MotorDriver.c'
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26016	   1168	  22648	  49832	   c2a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:35:20 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:35:28 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:35:40 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:35:43 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:35:46 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:35:57 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:36:04 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/MotorDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/MotorDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/MotorDriver.d" -MT"src/CraneDriver/MotorDriver.o" -o "src/CraneDriver/MotorDriver.o" "../src/CraneDriver/MotorDriver.c"
+../src/CraneDriver/MotorDriver.c:8:10: fatal error: MotorDriver.h: No such file or directory
+ #include "MotorDriver.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/CraneDriver/MotorDriver.o] Error 1
+14:36:09 **** Clean-only build of configuration Debug for project motor_test ****
+make clean 
+rm -rf  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/MotorDriver.o  ./src/test.o  ./src/MotorDriver/MotorDriver.d  ./src/CraneDriver/MotorDriver.d  ./src/test.d  motor_test.elf.size  motor_test.elf
+' '
+14:36:09 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/MotorDriver/MotorDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver/MotorDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/MotorDriver/MotorDriver.d" -MT"src/MotorDriver/MotorDriver.o" -o "src/MotorDriver/MotorDriver.o" "../src/MotorDriver/MotorDriver.c"
+../src/MotorDriver/MotorDriver.c: In function 'DriveMotor':
+../src/MotorDriver/MotorDriver.c:69:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+'Finished building: ../src/MotorDriver/MotorDriver.c'
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c:8:10: fatal error: MotorDriver.h: No such file or directory
+ #include "MotorDriver.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:36:22 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'InitializeMotorDriver':
+../src/CraneDriver/CraneDriver.c:56:9: warning: implicit declaration of function 'DriveMotor' [-Wimplicit-function-declaration]
+  return DriveMotor(initialDutyCycle);
+         ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: At top level:
+../src/CraneDriver/CraneDriver.c:60:6: error: conflicting types for 'DriveMotor'
+ bool DriveMotor(double dutyCycle) {
+      ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:56:9: note: previous implicit declaration of 'DriveMotor' was here
+  return DriveMotor(initialDutyCycle);
+         ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:69:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:36:30 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'InitializeMotorDriver':
+../src/CraneDriver/CraneDriver.c:57:9: warning: implicit declaration of function 'DriveMotor' [-Wimplicit-function-declaration]
+  return DriveMotor(initialDutyCycle);
+         ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: At top level:
+../src/CraneDriver/CraneDriver.c:61:6: error: conflicting types for 'DriveMotor'
+ bool DriveMotor(double dutyCycle) {
+      ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:57:9: note: previous implicit declaration of 'DriveMotor' was here
+  return DriveMotor(initialDutyCycle);
+         ^~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:70:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:02 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:28:22: error: 'TimerCounterInst' undeclared (first use in this function)
+  XTmrCtr_PwmDisable(&TimerCounterInst);
+                      ^~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:28:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/CraneDriver/CraneDriver.c:30:16: error: 'Frequency' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:30:29: error: 'NANOSECONDS_PER_SECOND' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                             ^~~~~~~~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:33:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: In function 'InitializeMotorDriver':
+../src/CraneDriver/CraneDriver.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:26 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:31:22: error: 'TimerCounterInst' undeclared (first use in this function)
+  XTmrCtr_PwmDisable(&TimerCounterInst);
+                      ^~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:31:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/CraneDriver/CraneDriver.c:33:16: error: 'Frequency' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:33:29: error: 'NANOSECONDS_PER_SECOND' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                             ^~~~~~~~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:36:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: In function 'InitializeMotorDriver':
+../src/CraneDriver/CraneDriver.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:30 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:30:22: error: 'TimerCounterInst' undeclared (first use in this function)
+  XTmrCtr_PwmDisable(&TimerCounterInst);
+                      ^~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:30:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/CraneDriver/CraneDriver.c:32:16: error: 'Frequency' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:32:29: error: 'NANOSECONDS_PER_SECOND' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                             ^~~~~~~~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:35:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c: In function 'InitializeMotorDriver':
+../src/CraneDriver/CraneDriver.c:24:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:32 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:30:22: error: 'TimerCounterInst' undeclared (first use in this function)
+  XTmrCtr_PwmDisable(&TimerCounterInst);
+                      ^~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:30:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/CraneDriver/CraneDriver.c:32:16: error: 'Frequency' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:32:29: error: 'NANOSECONDS_PER_SECOND' undeclared (first use in this function)
+  period = (1.0/Frequency) * NANOSECONDS_PER_SECOND;
+                             ^~~~~~~~~~~~~~~~~~~~~~
+../src/CraneDriver/CraneDriver.c:35:10: warning: unused variable 'actualDutyCycle' [-Wunused-variable]
+  uint8_t actualDutyCycle = XTmrCtr_PwmConfigure(&TimerCounterInst, period, highTime);
+          ^~~~~~~~~~~~~~~
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:51 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+In file included from ../src/CraneDriver/CraneDriver.c:8:0:
+../src/CraneDriver/CraneDriver.h:17:20: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool    DriveCrane(motorDirection direction, double speed);
+                    ^~~~~~~~~~~~~~
+                    MotorDirection
+../src/CraneDriver/CraneDriver.c:26:17: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool DriveMotor(motorDirection direction, double speed) {
+                 ^~~~~~~~~~~~~~
+                 MotorDirection
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:37:57 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c:26:17: error: unknown type name 'motorDirection'; did you mean 'MotorDirection'?
+ bool DriveMotor(motorDirection direction, double speed) {
+                 ^~~~~~~~~~~~~~
+                 MotorDirection
+make: *** [src/CraneDriver/CraneDriver.o] Error 1
+14:38:01 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:28:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/CraneDriver/CraneDriver.o: In function `InitializeMotorDriver':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:22: multiple definition of `InitializeMotorDriver'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:28: first defined here
+./src/CraneDriver/CraneDriver.o: In function `DriveMotor':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:26: multiple definition of `DriveMotor'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:60: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [motor_test.elf] Error 1
+14:39:08 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:27:8: warning: unused variable 'dir' [-Wunused-variable]
+  short dir = 0;
+        ^~~
+../src/CraneDriver/CraneDriver.c:31:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/CraneDriver/CraneDriver.o: In function `InitializeMotorDriver':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:22: multiple definition of `InitializeMotorDriver'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:28: first defined here
+./src/CraneDriver/CraneDriver.o: In function `DriveMotor':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:26: multiple definition of `DriveMotor'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:60: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [motor_test.elf] Error 1
+14:39:35 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:34:9: warning: unused variable 'dutyCycle' [-Wunused-variable]
+  double dutyCycle = 50 + (dir * (speed / 100.0));
+         ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/CraneDriver/CraneDriver.o: In function `InitializeMotorDriver':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:22: multiple definition of `InitializeMotorDriver'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:28: first defined here
+./src/CraneDriver/CraneDriver.o: In function `DriveMotor':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:26: multiple definition of `DriveMotor'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:60: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [motor_test.elf] Error 1
+14:39:46 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:34:9: warning: unused variable 'dutyCycle' [-Wunused-variable]
+  double dutyCycle = 50 + (dir * (speed / 100.0));
+         ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/CraneDriver/CraneDriver.o: In function `InitializeMotorDriver':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:22: multiple definition of `InitializeMotorDriver'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:28: first defined here
+./src/CraneDriver/CraneDriver.o: In function `DriveMotor':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:26: multiple definition of `DriveMotor'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:60: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [motor_test.elf] Error 1
+14:39:51 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'DriveMotor':
+../src/CraneDriver/CraneDriver.c:34:9: warning: unused variable 'dutyCycle' [-Wunused-variable]
+  double dutyCycle = 50.0 + (dir * (speed / 100.0));
+         ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:35:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/CraneDriver/CraneDriver.o: In function `InitializeMotorDriver':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:22: multiple definition of `InitializeMotorDriver'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:28: first defined here
+./src/CraneDriver/CraneDriver.o: In function `DriveMotor':
+D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/CraneDriver/CraneDriver.c:26: multiple definition of `DriveMotor'
+./src/MotorDriver/MotorDriver.o:D:\Users\larsk\Source\Portal-Crane\Miniproject_motor_control.sdk\motor_test\Debug/../src/MotorDriver/MotorDriver.c:60: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [motor_test.elf] Error 1
+14:40:11 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'InitializeCraneDriver':
+../src/CraneDriver/CraneDriver.c:23:9: warning: implicit declaration of function 'InitializeMotorDriver'; did you mean 'InitializeCraneDriver'? [-Wimplicit-function-declaration]
+  return InitializeMotorDriver(DefaultDutyCycle, DefaultFrequency);
+         ^~~~~~~~~~~~~~~~~~~~~
+         InitializeCraneDriver
+../src/CraneDriver/CraneDriver.c: In function 'DriveCrane':
+../src/CraneDriver/CraneDriver.c:34:9: warning: unused variable 'dutyCycle' [-Wunused-variable]
+  double dutyCycle = 50.0 + (dir * (speed / 100.0));
+         ^~~~~~~~~
+../src/CraneDriver/CraneDriver.c:37:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26208	   1168	  22648	  50024	   c368	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:40:46 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'InitializeCraneDriver':
+../src/CraneDriver/CraneDriver.c:23:9: warning: implicit declaration of function 'InitializeMotorDriver'; did you mean 'InitializeCraneDriver'? [-Wimplicit-function-declaration]
+  return InitializeMotorDriver(DefaultDutyCycle, DefaultFrequency);
+         ^~~~~~~~~~~~~~~~~~~~~
+         InitializeCraneDriver
+../src/CraneDriver/CraneDriver.c: In function 'DriveCrane':
+../src/CraneDriver/CraneDriver.c:36:2: warning: implicit declaration of function 'DriveMotor'; did you mean 'DriveCrane'? [-Wimplicit-function-declaration]
+  DriveMotor(dutyCycle);
+  ^~~~~~~~~~
+  DriveCrane
+../src/CraneDriver/CraneDriver.c:37:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26208	   1168	  22648	  50024	   c368	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:40:54 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'InitializeCraneDriver':
+../src/CraneDriver/CraneDriver.c:23:9: warning: implicit declaration of function 'InitializeMotorDriver'; did you mean 'InitializeCraneDriver'? [-Wimplicit-function-declaration]
+  return InitializeMotorDriver(DefaultDutyCycle, DefaultFrequency);
+         ^~~~~~~~~~~~~~~~~~~~~
+         InitializeCraneDriver
+../src/CraneDriver/CraneDriver.c: In function 'DriveCrane':
+../src/CraneDriver/CraneDriver.c:36:9: warning: implicit declaration of function 'DriveMotor'; did you mean 'DriveCrane'? [-Wimplicit-function-declaration]
+  return DriveMotor(dutyCycle);
+         ^~~~~~~~~~
+         DriveCrane
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26272	   1168	  22648	  50088	   c3a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:41:15 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:80:2: warning: implicit declaration of function 'InitializeCraneDriver'; did you mean 'InitializeMotorDriver'? [-Wimplicit-function-declaration]
+  InitializeCraneDriver();
+  ^~~~~~~~~~~~~~~~~~~~~
+  InitializeMotorDriver
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26208	   1168	  22648	  50024	   c368	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:41:28 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:80:2: warning: implicit declaration of function 'InitializeCraneDriver'; did you mean 'InitializeMotorDriver'? [-Wimplicit-function-declaration]
+  InitializeCraneDriver();
+  ^~~~~~~~~~~~~~~~~~~~~
+  InitializeMotorDriver
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:84:3: warning: implicit declaration of function 'DriveCrane'; did you mean 'DriveMotor'? [-Wimplicit-function-declaration]
+   DriveCrane(DriveLeft, 100);
+   ^~~~~~~~~~
+   DriveMotor
+../src/test.c:84:14: error: 'DriveLeft' undeclared (first use in this function); did you mean 'DriveMotor'?
+   DriveCrane(DriveLeft, 100);
+              ^~~~~~~~~
+              DriveMotor
+../src/test.c:84:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+make: *** [src/test.o] Error 1
+14:41:36 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:80:2: warning: implicit declaration of function 'InitializeCraneDriver'; did you mean 'InitializeMotorDriver'? [-Wimplicit-function-declaration]
+  InitializeCraneDriver();
+  ^~~~~~~~~~~~~~~~~~~~~
+  InitializeMotorDriver
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:84:3: warning: implicit declaration of function 'DriveCrane'; did you mean 'DriveMotor'? [-Wimplicit-function-declaration]
+   DriveCrane(DriveLeft, 100);
+   ^~~~~~~~~~
+   DriveMotor
+../src/test.c:84:14: error: 'DriveLeft' undeclared (first use in this function); did you mean 'DriveMotor'?
+   DriveCrane(DriveLeft, 100);
+              ^~~~~~~~~
+              DriveMotor
+../src/test.c:84:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/test.c:86:14: error: 'DriveRight' undeclared (first use in this function); did you mean 'DriveLeft'?
+   DriveCrane(DriveRight, 100.0);
+              ^~~~~~~~~~
+              DriveLeft
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+make: *** [src/test.o] Error 1
+14:41:51 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:81:2: warning: implicit declaration of function 'InitializeCraneDriver'; did you mean 'InitializeMotorDriver'? [-Wimplicit-function-declaration]
+  InitializeCraneDriver();
+  ^~~~~~~~~~~~~~~~~~~~~
+  InitializeMotorDriver
+../src/test.c:84:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:85:3: warning: implicit declaration of function 'DriveCrane'; did you mean 'DriveMotor'? [-Wimplicit-function-declaration]
+   DriveCrane(DriveLeft, 100);
+   ^~~~~~~~~~
+   DriveMotor
+../src/test.c:85:14: error: 'DriveLeft' undeclared (first use in this function); did you mean 'DriveMotor'?
+   DriveCrane(DriveLeft, 100);
+              ^~~~~~~~~
+              DriveMotor
+../src/test.c:85:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/test.c:87:14: error: 'DriveRight' undeclared (first use in this function); did you mean 'DriveLeft'?
+   DriveCrane(DriveRight, 100.0);
+              ^~~~~~~~~~
+              DriveLeft
+../src/test.c:79:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:121:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+make: *** [src/test.o] Error 1
+14:42:33 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26208	   1168	  22648	  50024	   c368	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:42:42 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:43:01 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:43:32 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'InitializeCraneDriver':
+../src/CraneDriver/CraneDriver.c:23:9: warning: implicit declaration of function 'InitializeMotorDriver'; did you mean 'InitializeCraneDriver'? [-Wimplicit-function-declaration]
+  return InitializeMotorDriver(DefaultDutyCycle, DefaultFrequency);
+         ^~~~~~~~~~~~~~~~~~~~~
+         InitializeCraneDriver
+../src/CraneDriver/CraneDriver.c: In function 'DriveCrane':
+../src/CraneDriver/CraneDriver.c:36:9: warning: implicit declaration of function 'DriveMotor'; did you mean 'DriveCrane'? [-Wimplicit-function-declaration]
+  return DriveMotor(dutyCycle);
+         ^~~~~~~~~~
+         DriveCrane
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26272	   1168	  22648	  50088	   c3a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:43:35 **** Auto Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/CraneDriver/CraneDriver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CraneDriver/CraneDriver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CraneDriver/CraneDriver.d" -MT"src/CraneDriver/CraneDriver.o" -o "src/CraneDriver/CraneDriver.o" "../src/CraneDriver/CraneDriver.c"
+../src/CraneDriver/CraneDriver.c: In function 'InitializeCraneDriver':
+../src/CraneDriver/CraneDriver.c:23:9: warning: implicit declaration of function 'InitializeMotorDriver'; did you mean 'InitializeCraneDriver'? [-Wimplicit-function-declaration]
+  return InitializeMotorDriver(DefaultDutyCycle, DefaultFrequency);
+         ^~~~~~~~~~~~~~~~~~~~~
+         InitializeCraneDriver
+../src/CraneDriver/CraneDriver.c: In function 'DriveCrane':
+../src/CraneDriver/CraneDriver.c:36:9: warning: implicit declaration of function 'DriveMotor'; did you mean 'DriveCrane'? [-Wimplicit-function-declaration]
+  return DriveMotor(dutyCycle);
+         ^~~~~~~~~~
+         DriveCrane
+'Finished building: ../src/CraneDriver/CraneDriver.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26272	   1168	  22648	  50088	   c3a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:43:40 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:43:57 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:45:40 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26272	   1168	  22648	  50088	   c3a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:46:09 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:46:27 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+14:48:32 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/test.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../motor_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:83:3: warning: implicit declaration of function 'sleep'; did you mean 'strsep'? [-Wimplicit-function-declaration]
+   sleep(10);
+   ^~~~~
+   strsep
+../src/test.c:78:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/test.c: In function 'TmrCtrPwmExample':
+../src/test.c:120:6: warning: variable 'Div' set but not used [-Wunused-but-set-variable]
+  u8  Div;
+      ^~~
+'Finished building: ../src/test.c'
+' '
+'Building target: motor_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../motor_test_bsp/ps7_cortexa9_0/lib -o "motor_test.elf"  ./src/MotorDriver/MotorDriver.o  ./src/CraneDriver/CraneDriver.o  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: motor_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size motor_test.elf  |tee "motor_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26272	   1168	  22648	  50088	   c3a8	motor_test.elf
+'Finished building: motor_test.elf.size'
+' '
+14:48:51 **** Incremental Build of configuration Debug for project motor_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.

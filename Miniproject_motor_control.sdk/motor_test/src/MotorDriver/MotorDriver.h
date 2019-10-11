@@ -2,7 +2,7 @@
  * MotorDriver.h
  *
  *  Created on: Oct 2, 2019
- *      Author: lars
+ *      Author: Lars
  */
 
 #ifndef SRC_MOTORDRIVER_MOTORDRIVER_H_

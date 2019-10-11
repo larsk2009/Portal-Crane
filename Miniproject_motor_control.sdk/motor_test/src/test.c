@@ -22,7 +22,7 @@
 #include "xil_printf.h"
 #endif
 
-#include "MotorDriver/MotorDriver.h"
+#include "CraneDriver/CraneDriver.h"
 
 /************************** Constant Definitions *****************************/
 /*
@@ -77,13 +77,13 @@ int main(void)
 {
 	int Status;
 
-	InitializeMotorDriver(50.0, 15000);
+	InitializeCraneDriver();
 
 	while(1) {
-		sleep(1);
-		DriveMotor(10);
-		sleep(1);
-		DriveMotor(90);
+		sleep(10);
+		DriveCrane(DriveLeft, 100);
+		sleep(10);
+		DriveCrane(DriveRight, 100);
 	}
 
 	/* Run the Timer Counter PWM example
