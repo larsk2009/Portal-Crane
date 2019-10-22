@@ -1,0 +1,97 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Oct 21 12:21:11 2019
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Block_design_transferf_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Block_design_transferf_ip_0_0 (xilinx.com:ip:transferf_ip:1.0) from (Rev. 1910211203) to (Rev. 1910211220)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Oct 21 12:04:43 2019
+| Host         : MSI running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Block_design_transferf_ip_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Block_design_transferf_ip_0_0 (xilinx.com:ip:transferf_ip:1.0) from (Rev. 1910211155) to (Rev. 1910211203)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Block_design_transferf_ip_0_0'.
+
+
+-Upgrade has removed interface 'AXI4_Lite'
+
+-Upgrade has removed interface 'AXI4_Lite_signal_clock'
+
+-Upgrade has removed interface 'AXI4_Lite_signal_reset'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Block_design_transferf_ip_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'AXI4_Lite_ACLK'
+
+-Upgrade has removed port 'AXI4_Lite_ARADDR'
+
+-Upgrade has removed port 'AXI4_Lite_ARESETN'
+
+-Upgrade has removed port 'AXI4_Lite_ARREADY'
+
+-Upgrade has removed port 'AXI4_Lite_ARVALID'
+
+-Upgrade has removed port 'AXI4_Lite_AWADDR'
+
+-Upgrade has removed port 'AXI4_Lite_AWREADY'
+
+-Upgrade has removed port 'AXI4_Lite_AWVALID'
+
+-Upgrade has removed port 'AXI4_Lite_BREADY'
+
+-Upgrade has removed port 'AXI4_Lite_BRESP'
+
+-Upgrade has removed port 'AXI4_Lite_BVALID'
+
+-Upgrade has removed port 'AXI4_Lite_RDATA'
+
+-Upgrade has removed port 'AXI4_Lite_RREADY'
+
+-Upgrade has removed port 'AXI4_Lite_RRESP'
+
+-Upgrade has removed port 'AXI4_Lite_RVALID'
+
+-Upgrade has removed port 'AXI4_Lite_WDATA'
+
+-Upgrade has removed port 'AXI4_Lite_WREADY'
+
+-Upgrade has removed port 'AXI4_Lite_WSTRB'
+
+-Upgrade has removed port 'AXI4_Lite_WVALID'
+
+

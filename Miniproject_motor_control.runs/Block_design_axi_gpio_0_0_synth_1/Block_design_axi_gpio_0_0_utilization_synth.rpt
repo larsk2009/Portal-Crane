@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Tue Oct  1 16:07:18 2019
+| Date         : Tue Oct 22 19:53:13 2019
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Block_design_axi_gpio_0_0_utilization_synth.rpt -pb Block_design_axi_gpio_0_0_utilization_synth.pb
 | Design       : Block_design_axi_gpio_0_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   44 |     0 |     17600 |  0.25 |
-|   LUT as Logic          |   44 |     0 |     17600 |  0.25 |
+| Slice LUTs*             |   36 |     0 |     17600 |  0.20 |
+|   LUT as Logic          |   36 |     0 |     17600 |  0.20 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |   72 |     0 |     35200 |  0.20 |
-|   Register as Flip Flop |   72 |     0 |     35200 |  0.20 |
+| Slice Registers         |   37 |     0 |     35200 |  0.11 |
+|   Register as Flip Flop |   37 |     0 |     35200 |  0.11 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 5     |          Yes |         Set |            - |
-| 67    |          Yes |       Reset |            - |
+| 2     |          Yes |         Set |            - |
+| 35    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,14 +146,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   67 |        Flop & Latch |
-| LUT5     |   14 |                 LUT |
-| LUT6     |   12 |                 LUT |
+| FDRE     |   35 |        Flop & Latch |
+| LUT5     |   11 |                 LUT |
+| LUT6     |    9 |                 LUT |
 | LUT2     |    9 |                 LUT |
-| LUT4     |    8 |                 LUT |
-| LUT3     |    7 |                 LUT |
-| FDSE     |    5 |        Flop & Latch |
+| LUT3     |    8 |                 LUT |
+| LUT4     |    6 |                 LUT |
 | LUT1     |    2 |                 LUT |
+| FDSE     |    2 |        Flop & Latch |
 +----------+------+---------------------+
 
 

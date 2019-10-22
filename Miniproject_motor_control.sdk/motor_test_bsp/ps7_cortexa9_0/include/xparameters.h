@@ -124,6 +124,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver ENCODER */
+#define XPAR_ENCODER_NUM_INSTANCES 1
+
+/* Definitions for peripheral ENCODER_0 */
+#define XPAR_ENCODER_0_DEVICE_ID 0
+#define XPAR_ENCODER_0_S00_AXI_BASEADDR 0xFFFFFFFF
+#define XPAR_ENCODER_0_S00_AXI_HIGHADDR 0x00000000
+
+
+/******************************************************************/
+
 
 /* Definitions for peripheral PS7_AFI_0 */
 #define XPAR_PS7_AFI_0_S_AXI_BASEADDR 0xF8008000

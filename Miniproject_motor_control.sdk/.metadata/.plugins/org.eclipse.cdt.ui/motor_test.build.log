@@ -1,8 +1,8 @@
-14:48:51 **** Incremental Build of configuration Debug for project motor_test ****
+20:10:48 **** Incremental Build of configuration Debug for project motor_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for `main-build'.
+make: Er is niets te doen voor 'main-build'.
 
-14:48:52 Build Finished (took 360ms)
+20:10:48 Build Finished (took 466ms)
 

@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Oct 18 09:10:51 UTC 2019
+VLNV: xilinx.com:user:encoder:2.0
+SynthRuntime: 85
