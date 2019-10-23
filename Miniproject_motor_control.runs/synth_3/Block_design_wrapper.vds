@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Oct 22 20:04:56 2019
-# Process ID: 23020
+# Start of session at: Wed Oct 23 12:03:42 2019
+# Process ID: 25076
 # Current directory: D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3
 # Command line: vivado.exe -log Block_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Block_design_wrapper.tcl
 # Log file: D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/Block_design_wrapper.vds
@@ -14,63 +14,69 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/EAAES/EAAES_coreips/Encoder_v1/Decoder_1.0'. The path is contained within another repository.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EAAES/EAAES_coreips'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 295.820 ; gain = 54.547
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 299.438 ; gain = 58.074
 Command: synth_design -top Block_design_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19540 
+INFO: Helper process launched with PID 20372 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 404.781 ; gain = 101.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 406.277 ; gain = 99.930
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Block_design_wrapper' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd:47]
-INFO: [Synth 8-3491] module 'Block_design' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1348' bound to instance 'Block_design_i' of component 'Block_design' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'Block_design' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1385]
-INFO: [Synth 8-3491] module 'Block_design_axi_gpio_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'Block_design_axi_gpio_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1797]
-INFO: [Synth 8-638] synthesizing module 'Block_design_axi_gpio_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Block_design_axi_timer_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Block_design_axi_timer_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1820]
-INFO: [Synth 8-638] synthesizing module 'Block_design_axi_timer_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'Block_design_counter_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_counter_0_0_stub.vhdl:5' bound to instance 'counter_0' of component 'Block_design_counter_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1849]
-INFO: [Synth 8-638] synthesizing module 'Block_design_counter_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_counter_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'Block_design_encoder_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_encoder_0_0_stub.vhdl:5' bound to instance 'encoder_0' of component 'Block_design_encoder_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1857]
-INFO: [Synth 8-638] synthesizing module 'Block_design_encoder_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_encoder_0_0_stub.vhdl:35]
-INFO: [Synth 8-3491] module 'Block_design_mux2_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_mux2_0_0_stub.vhdl:5' bound to instance 'mux2_0' of component 'Block_design_mux2_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1884]
-INFO: [Synth 8-638] synthesizing module 'Block_design_mux2_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_mux2_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'Block_design_processing_system7_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Block_design_processing_system7_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1891]
-INFO: [Synth 8-638] synthesizing module 'Block_design_processing_system7_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_processing_system7_0_0_stub.vhdl:76]
-INFO: [Synth 8-638] synthesizing module 'Block_design_ps7_0_axi_periph_1' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:749]
+INFO: [Synth 8-3491] module 'Block_design' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1555' bound to instance 'Block_design_i' of component 'Block_design' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'Block_design' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1592]
+INFO: [Synth 8-3491] module 'Block_design_axi_gpio_0_1' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_0_1_stub.vhdl:5' bound to instance 'adcIn_adcOut' of component 'Block_design_axi_gpio_0_1' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2039]
+INFO: [Synth 8-638] synthesizing module 'Block_design_axi_gpio_0_1' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_0_1_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Block_design_axi_timer_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Block_design_axi_timer_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2063]
+INFO: [Synth 8-638] synthesizing module 'Block_design_axi_timer_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'Block_design_axi_gpio_1_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_1_0_stub.vhdl:5' bound to instance 'counterIn_counterOut' of component 'Block_design_axi_gpio_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2092]
+INFO: [Synth 8-638] synthesizing module 'Block_design_axi_gpio_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_1_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Block_design_counter_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_counter_0_0_stub.vhdl:5' bound to instance 'counter_0' of component 'Block_design_counter_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2116]
+INFO: [Synth 8-638] synthesizing module 'Block_design_counter_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_counter_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'Block_design_mux2_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_mux2_0_0_stub.vhdl:5' bound to instance 'mux2_0' of component 'Block_design_mux2_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2124]
+INFO: [Synth 8-638] synthesizing module 'Block_design_mux2_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_mux2_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Block_design_axi_gpio_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_0_0_stub.vhdl:5' bound to instance 'muxOut_resetOut' of component 'Block_design_axi_gpio_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2131]
+INFO: [Synth 8-638] synthesizing module 'Block_design_axi_gpio_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Block_design_processing_system7_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Block_design_processing_system7_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2155]
+INFO: [Synth 8-638] synthesizing module 'Block_design_processing_system7_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-638] synthesizing module 'Block_design_ps7_0_axi_periph_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:857]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_ZVJF7L' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_ZVJF7L' (1#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_15Q8R9D' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:162]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_15Q8R9D' (2#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1CL4XFL' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:269]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1CL4XFL' (3#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:269]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_17B5XCI' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:393]
-INFO: [Synth 8-3491] module 'Block_design_auto_pc_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Block_design_auto_pc_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:576]
-INFO: [Synth 8-638] synthesizing module 'Block_design_auto_pc_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_17B5XCI' (4#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:393]
-INFO: [Synth 8-3491] module 'Block_design_xbar_1' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'Block_design_xbar_1' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1262]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xbar_1' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xbar_1_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'Block_design_ps7_0_axi_periph_1' (5#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:749]
-INFO: [Synth 8-3491] module 'Block_design_pwm_prog_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_pwm_prog_0_0_stub.vhdl:5' bound to instance 'pwm_prog_0' of component 'Block_design_pwm_prog_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2063]
-INFO: [Synth 8-638] synthesizing module 'Block_design_pwm_prog_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_pwm_prog_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'Block_design_rst_ps7_0_50M_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'Block_design_rst_ps7_0_50M_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2071]
-INFO: [Synth 8-638] synthesizing module 'Block_design_rst_ps7_0_50M_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Block_design_xadc_wiz_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'Block_design_xadc_wiz_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2084]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xadc_wiz_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xadc_wiz_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'Block_design_xlconstant_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_0_0_stub.vhdl:5' bound to instance 'xlconstant_0' of component 'Block_design_xlconstant_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2103]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_0_0_stub.vhdl:12]
-INFO: [Synth 8-3491] module 'Block_design_xlconstant_1_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_1_0_stub.vhdl:5' bound to instance 'xlconstant_1' of component 'Block_design_xlconstant_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2107]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_1_0_stub.vhdl:12]
-INFO: [Synth 8-3491] module 'Block_design_xlconstant_2_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_2_0_stub.vhdl:5' bound to instance 'xlconstant_2' of component 'Block_design_xlconstant_2_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2111]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_2_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_2_0_stub.vhdl:12]
-INFO: [Synth 8-3491] module 'Block_design_xlconstant_3_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_3_0_stub.vhdl:5' bound to instance 'xlconstant_3' of component 'Block_design_xlconstant_3_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2115]
-INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_3_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-23020-MSI/realtime/Block_design_xlconstant_3_0_stub.vhdl:12]
-INFO: [Synth 8-256] done synthesizing module 'Block_design' (6#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1385]
-INFO: [Synth 8-256] done synthesizing module 'Block_design_wrapper' (7#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_15Q8R9D' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:158]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_15Q8R9D' (2#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_1CL4XFL' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_1CL4XFL' (3#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1F3YFSX' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:360]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1F3YFSX' (4#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:360]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_17B5XCI' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:484]
+INFO: [Synth 8-3491] module 'Block_design_auto_pc_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Block_design_auto_pc_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:667]
+INFO: [Synth 8-638] synthesizing module 'Block_design_auto_pc_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_17B5XCI' (5#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:484]
+INFO: [Synth 8-3491] module 'Block_design_xbar_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Block_design_xbar_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1456]
+INFO: [Synth 8-638] synthesizing module 'Block_design_xbar_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'Block_design_ps7_0_axi_periph_0' (6#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:857]
+INFO: [Synth 8-3491] module 'Block_design_pwm_prog_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_pwm_prog_0_0_stub.vhdl:5' bound to instance 'pwm_prog_0' of component 'Block_design_pwm_prog_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2344]
+INFO: [Synth 8-638] synthesizing module 'Block_design_pwm_prog_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_pwm_prog_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'Block_design_rst_ps7_0_50M_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'Block_design_rst_ps7_0_50M_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2352]
+INFO: [Synth 8-638] synthesizing module 'Block_design_rst_ps7_0_50M_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Block_design_xadc_wiz_0_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'Block_design_xadc_wiz_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2365]
+INFO: [Synth 8-638] synthesizing module 'Block_design_xadc_wiz_0_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xadc_wiz_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'Block_design_xlconstant_1_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_1_0_stub.vhdl:5' bound to instance 'xlconstant_1' of component 'Block_design_xlconstant_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2384]
+INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_1_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_1_0_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'Block_design_xlconstant_2_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_2_0_stub.vhdl:5' bound to instance 'xlconstant_2' of component 'Block_design_xlconstant_2_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2388]
+INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_2_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_2_0_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'Block_design_xlconstant_3_0' declared at 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_3_0_stub.vhdl:5' bound to instance 'xlconstant_3' of component 'Block_design_xlconstant_3_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:2392]
+INFO: [Synth 8-638] synthesizing module 'Block_design_xlconstant_3_0' [D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/.Xil/Vivado-25076-MSI/realtime/Block_design_xlconstant_3_0_stub.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'Block_design' (7#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/synth/Block_design.vhd:1592]
+INFO: [Synth 8-256] done synthesizing module 'Block_design_wrapper' (8#1) [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd:47]
 WARNING: [Synth 8-3331] design s00_couplers_imp_17B5XCI has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_17B5XCI has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1F3YFSX has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1F3YFSX has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1F3YFSX has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1F3YFSX has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_1CL4XFL has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m02_couplers_imp_1CL4XFL has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_1CL4XFL has unconnected port S_ACLK
@@ -84,7 +90,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_ZVJF7L has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_ZVJF7L has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_ZVJF7L has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 461.945 ; gain = 159.086
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 463.613 ; gain = 157.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -97,10 +103,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 461.945 ; gain = 159.086
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 463.613 ; gain = 157.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 461.945 ; gain = 159.086
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 463.613 ; gain = 157.266
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -115,10 +121,6 @@ Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_processing_system7_0_0/Block_design_processing_system7_0_0/Block_design_processing_system7_0_0_in_context.xdc] for cell 'Block_design_i/processing_system7_0'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'Block_design_i/rst_ps7_0_50M'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0_in_context.xdc] for cell 'Block_design_i/rst_ps7_0_50M'
-Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_encoder_0_0_1/Block_design_encoder_0_0/Block_design_encoder_0_0_in_context.xdc] for cell 'Block_design_i/encoder_0'
-Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_encoder_0_0_1/Block_design_encoder_0_0/Block_design_encoder_0_0_in_context.xdc] for cell 'Block_design_i/encoder_0'
-Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_0_0_1/Block_design_xlconstant_0_0/Block_design_xlconstant_0_0_in_context.xdc] for cell 'Block_design_i/xlconstant_0'
-Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_0_0_1/Block_design_xlconstant_0_0/Block_design_xlconstant_0_0_in_context.xdc] for cell 'Block_design_i/xlconstant_0'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_1_0_1/Block_design_xlconstant_1_0/Block_design_xlconstant_1_0_in_context.xdc] for cell 'Block_design_i/xlconstant_1'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_1_0_1/Block_design_xlconstant_1_0/Block_design_xlconstant_1_0_in_context.xdc] for cell 'Block_design_i/xlconstant_1'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_3_0_1/Block_design_xlconstant_3_0/Block_design_xlconstant_0_0_in_context.xdc] for cell 'Block_design_i/xlconstant_3'
@@ -127,14 +129,18 @@ Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xadc_wiz_0_0/Block_design_xadc_wiz_0_0/Block_design_xadc_wiz_0_0_in_context.xdc] for cell 'Block_design_i/xadc_wiz_0'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_2_0_1/Block_design_xlconstant_2_0/Block_design_xlconstant_0_0_in_context.xdc] for cell 'Block_design_i/xlconstant_2'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_2_0_1/Block_design_xlconstant_2_0/Block_design_xlconstant_0_0_in_context.xdc] for cell 'Block_design_i/xlconstant_2'
-Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_1_1/Block_design_xbar_1/Block_design_xbar_1_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/xbar'
-Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_1_1/Block_design_xbar_1/Block_design_xbar_1_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_mux2_0_0/Block_design_mux2_0_0/Block_design_mux2_0_0_in_context.xdc] for cell 'Block_design_i/mux2_0'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_mux2_0_0/Block_design_mux2_0_0/Block_design_mux2_0_0_in_context.xdc] for cell 'Block_design_i/mux2_0'
-Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_0_1/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0_in_context.xdc] for cell 'Block_design_i/axi_gpio_0'
-Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_0_1/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0_in_context.xdc] for cell 'Block_design_i/axi_gpio_0'
+Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_0_1/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0_in_context.xdc] for cell 'Block_design_i/muxOut_resetOut'
+Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_0_1/Block_design_axi_gpio_0_0/Block_design_axi_gpio_0_0_in_context.xdc] for cell 'Block_design_i/muxOut_resetOut'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_counter_0_0/Block_design_counter_0_0/Block_design_counter_0_0_in_context.xdc] for cell 'Block_design_i/counter_0'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_counter_0_0/Block_design_counter_0_0/Block_design_counter_0_0_in_context.xdc] for cell 'Block_design_i/counter_0'
+Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_1_0_1/Block_design_axi_gpio_1_0/Block_design_axi_gpio_1_0_in_context.xdc] for cell 'Block_design_i/counterIn_counterOut'
+Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_1_0_1/Block_design_axi_gpio_1_0/Block_design_axi_gpio_1_0_in_context.xdc] for cell 'Block_design_i/counterIn_counterOut'
+Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1_in_context.xdc] for cell 'Block_design_i/adcIn_adcOut'
+Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1_in_context.xdc] for cell 'Block_design_i/adcIn_adcOut'
+Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_0_1/Block_design_xbar_0/Block_design_xbar_0_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_0_1/Block_design_xbar_0/Block_design_xbar_0_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_auto_pc_0/Block_design_auto_pc_0/Block_design_auto_pc_0_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_auto_pc_0/Block_design_auto_pc_0/Block_design_auto_pc_0_in_context.xdc] for cell 'Block_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/constrs_1/imports/Portal-Crane/Zybo-Z7-Master.xdc]
@@ -148,16 +154,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 754.051 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 751.301 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 754.051 ; gain = 451.191
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 751.301 ; gain = 444.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 754.051 ; gain = 451.191
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 751.301 ; gain = 444.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -427,23 +433,23 @@ Applied set_property DONT_TOUCH = true for Block_design_i/pwm_prog_0. (constrain
 Applied set_property DONT_TOUCH = true for Block_design_i/axi_timer_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Block_design_i/encoder_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Block_design_i/xlconstant_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/xlconstant_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/xlconstant_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/xadc_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/xlconstant_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Block_design_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Block_design_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/mux2_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for Block_design_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Block_design_i/muxOut_resetOut. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/counter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Block_design_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Block_design_i/counterIn_counterOut. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Block_design_i/adcIn_adcOut. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Block_design_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Block_design_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 754.051 ; gain = 451.191
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 751.301 ; gain = 444.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 754.051 ; gain = 451.191
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 751.301 ; gain = 444.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -478,14 +484,16 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M00_ACLK
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M00_ARESETN
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M01_ACLK
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_1 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design Block_design_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 754.051 ; gain = 451.191
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 751.301 ; gain = 444.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -499,13 +507,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Block_design_i/processing_system7_0/FCLK_CLK0' to pin 'Block_design_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 770.117 ; gain = 467.258
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 770.656 ; gain = 464.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 770.262 ; gain = 467.402
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 770.730 ; gain = 464.383
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -517,7 +525,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 771.270 ; gain = 468.410
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 771.582 ; gain = 465.234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -541,7 +549,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -554,7 +562,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -566,25 +574,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -594,18 +602,18 @@ Report BlackBoxes:
 +------+------------------------------------+----------+
 |      |BlackBox name                       |Instances |
 +------+------------------------------------+----------+
-|1     |Block_design_xbar_1                 |         1|
+|1     |Block_design_xbar_0                 |         1|
 |2     |Block_design_auto_pc_0              |         1|
-|3     |Block_design_axi_gpio_0_0           |         1|
+|3     |Block_design_axi_gpio_0_1           |         1|
 |4     |Block_design_axi_timer_0_0          |         1|
-|5     |Block_design_counter_0_0            |         1|
-|6     |Block_design_encoder_0_0            |         1|
+|5     |Block_design_axi_gpio_1_0           |         1|
+|6     |Block_design_counter_0_0            |         1|
 |7     |Block_design_mux2_0_0               |         1|
-|8     |Block_design_processing_system7_0_0 |         1|
-|9     |Block_design_pwm_prog_0_0           |         1|
-|10    |Block_design_rst_ps7_0_50M_0        |         1|
-|11    |Block_design_xadc_wiz_0_0           |         1|
-|12    |Block_design_xlconstant_0_0         |         1|
+|8     |Block_design_axi_gpio_0_0           |         1|
+|9     |Block_design_processing_system7_0_0 |         1|
+|10    |Block_design_pwm_prog_0_0           |         1|
+|11    |Block_design_rst_ps7_0_50M_0        |         1|
+|12    |Block_design_xadc_wiz_0_0           |         1|
 |13    |Block_design_xlconstant_1_0         |         1|
 |14    |Block_design_xlconstant_2_0         |         1|
 |15    |Block_design_xlconstant_3_0         |         1|
@@ -615,18 +623,18 @@ Report Cell Usage:
 +------+-------------------------------------------+------+
 |      |Cell                                       |Count |
 +------+-------------------------------------------+------+
-|1     |Block_design_auto_pc_0_bbox_6              |     1|
-|2     |Block_design_axi_gpio_0_0_bbox_0           |     1|
-|3     |Block_design_axi_timer_0_0_bbox_1          |     1|
-|4     |Block_design_counter_0_0_bbox_2            |     1|
-|5     |Block_design_encoder_0_0_bbox_3            |     1|
-|6     |Block_design_mux2_0_0_bbox_4               |     1|
-|7     |Block_design_processing_system7_0_0_bbox_5 |     1|
-|8     |Block_design_pwm_prog_0_0_bbox_8           |     1|
-|9     |Block_design_rst_ps7_0_50M_0_bbox_9        |     1|
-|10    |Block_design_xadc_wiz_0_0_bbox_10          |     1|
-|11    |Block_design_xbar_1_bbox_7                 |     1|
-|12    |Block_design_xlconstant_0_0_bbox_11        |     1|
+|1     |Block_design_auto_pc_0_bbox_7              |     1|
+|2     |Block_design_axi_gpio_0_0_bbox_5           |     1|
+|3     |Block_design_axi_gpio_0_1_bbox_0           |     1|
+|4     |Block_design_axi_gpio_1_0_bbox_2           |     1|
+|5     |Block_design_axi_timer_0_0_bbox_1          |     1|
+|6     |Block_design_counter_0_0_bbox_3            |     1|
+|7     |Block_design_mux2_0_0_bbox_4               |     1|
+|8     |Block_design_processing_system7_0_0_bbox_6 |     1|
+|9     |Block_design_pwm_prog_0_0_bbox_9           |     1|
+|10    |Block_design_rst_ps7_0_50M_0_bbox_10       |     1|
+|11    |Block_design_xadc_wiz_0_0_bbox_11          |     1|
+|12    |Block_design_xbar_0_bbox_8                 |     1|
 |13    |Block_design_xlconstant_1_0_bbox_12        |     1|
 |14    |Block_design_xlconstant_2_0_bbox_13        |     1|
 |15    |Block_design_xlconstant_3_0_bbox_14        |     1|
@@ -638,17 +646,17 @@ Report Instance Areas:
 +------+---------------------+--------------------------------+------+
 |      |Instance             |Module                          |Cells |
 +------+---------------------+--------------------------------+------+
-|1     |top                  |                                |   946|
-|2     |  Block_design_i     |Block_design                    |   939|
-|3     |    ps7_0_axi_periph |Block_design_ps7_0_axi_periph_1 |   551|
+|1     |top                  |                                |  1166|
+|2     |  Block_design_i     |Block_design                    |  1159|
+|3     |    ps7_0_axi_periph |Block_design_ps7_0_axi_periph_0 |   662|
 |4     |      s00_couplers   |s00_couplers_imp_17B5XCI        |   177|
 +------+---------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 771.457 ; gain = 176.492
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 771.457 ; gain = 468.598
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 771.957 ; gain = 177.922
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 771.957 ; gain = 465.609
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -658,11 +666,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+64 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 790.777 ; gain = 494.957
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 787.781 ; gain = 488.344
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/Block_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Block_design_wrapper_utilization_synth.rpt -pb Block_design_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 791.012 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 22 20:06:15 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 788.012 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 23 12:04:41 2019...

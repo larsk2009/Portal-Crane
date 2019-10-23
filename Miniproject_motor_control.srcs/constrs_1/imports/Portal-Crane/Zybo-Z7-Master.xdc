@@ -24,10 +24,10 @@
 
 
 ##LEDs
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { b }]; #IO_L23P_T3_35 Sch=led[0]
+#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { b }]; #IO_L23P_T3_35 Sch=led[0]
 #set_property -dict { PACKAGE_PIN M15   IOSTANDARD LVCMOS33 } [get_ports { gpio_out[0] }]; #IO_L23N_T3_35 Sch=led[1]
-set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { o_pwm }];#IO_0_35 Sch=led[2]
-set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { pwm0 }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]
+#set_property -dict { PACKAGE_PIN G14   IOSTANDARD LVCMOS33 } [get_ports { o_pwm }];#IO_0_35 Sch=led[2]
+#set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { pwm0 }]; #IO_L3N_T0_DQS_AD1N_35 Sch=led[3]
 
 
 ##RGB LED 5 (Zybo Z7-20 only)
@@ -123,9 +123,9 @@ set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { Vaux14
                                                                                                                                  
                                                                                                                                  
 ##Pmod Header JC                                                                                                                  
-#set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33     } [get_ports { pwm0 }]; #IO_L10P_T1_34 Sch=jc_p[1]   			 
-#set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33     } [get_ports { pwm_out }]; #IO_L10N_T1_34 Sch=jc_n[1]		     
-#set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { o_pwm }]; #IO_L1P_T0_34 Sch=jc_p[2]              
+set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33     } [get_ports { b }]; #IO_L10P_T1_34 Sch=jc_p[1]   			 
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33     } [get_ports { pwm0 }]; #IO_L10N_T1_34 Sch=jc_n[1]		     
+set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { o_pwm }]; #IO_L1P_T0_34 Sch=jc_p[2]              
 #set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33     } [get_ports { gpio_out[0] }]; #IO_L1N_T0_34 Sch=jc_n[2]              
 set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33     } [get_ports { A_In }]; #IO_L8P_T1_34 Sch=jc_p[3]              
 set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33     } [get_ports { B_In }]; #IO_L8N_T1_34 Sch=jc_n[3]              

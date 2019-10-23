@@ -58,7 +58,7 @@ ENTITY Block_design_counter_0_0 IS
     Clk : IN STD_LOGIC;
     A_In : IN STD_LOGIC;
     B_In : IN STD_LOGIC;
-    data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     Reset : IN STD_LOGIC
   );
 END Block_design_counter_0_0;
@@ -71,7 +71,7 @@ ARCHITECTURE Block_design_counter_0_0_arch OF Block_design_counter_0_0 IS
       Clk : IN STD_LOGIC;
       A_In : IN STD_LOGIC;
       B_In : IN STD_LOGIC;
-      data_out : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+      data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       Reset : IN STD_LOGIC
     );
   END COMPONENT counter;

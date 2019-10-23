@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Oct 21 12:11:00 2019
+// Date        : Wed Oct 23 12:03:39 2019
 // Host        : MSI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top Block_design_xlconstant_1_0 -prefix
-//               Block_design_xlconstant_1_0_ Block_design_xlconstant_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xlconstant_1_0_1/Block_design_xlconstant_1_0_sim_netlist.v
 // Design      : Block_design_xlconstant_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,24 +18,27 @@ module Block_design_xlconstant_1_0
    (dout);
   output [15:0]dout;
 
+  wire \<const0> ;
   wire \<const1> ;
 
-  assign dout[15] = \<const1> ;
-  assign dout[14] = \<const1> ;
-  assign dout[13] = \<const1> ;
-  assign dout[12] = \<const1> ;
+  assign dout[15] = \<const0> ;
+  assign dout[14] = \<const0> ;
+  assign dout[13] = \<const0> ;
+  assign dout[12] = \<const0> ;
   assign dout[11] = \<const1> ;
   assign dout[10] = \<const1> ;
-  assign dout[9] = \<const1> ;
+  assign dout[9] = \<const0> ;
   assign dout[8] = \<const1> ;
-  assign dout[7] = \<const1> ;
-  assign dout[6] = \<const1> ;
-  assign dout[5] = \<const1> ;
-  assign dout[4] = \<const1> ;
-  assign dout[3] = \<const1> ;
+  assign dout[7] = \<const0> ;
+  assign dout[6] = \<const0> ;
+  assign dout[5] = \<const0> ;
+  assign dout[4] = \<const0> ;
+  assign dout[3] = \<const0> ;
   assign dout[2] = \<const1> ;
-  assign dout[1] = \<const1> ;
+  assign dout[1] = \<const0> ;
   assign dout[0] = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
 endmodule

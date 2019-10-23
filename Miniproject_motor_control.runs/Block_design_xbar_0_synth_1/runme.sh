@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.runs/Block_design_xbar_0_synth_1'
+HD_PWD='D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/Block_design_xbar_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

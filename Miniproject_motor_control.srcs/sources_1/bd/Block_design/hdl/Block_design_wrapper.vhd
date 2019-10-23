@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Tue Oct 22 20:03:26 2019
+--Date        : Wed Oct 23 12:02:36 2019
 --Host        : MSI running 64-bit major release  (build 9200)
 --Command     : generate_target Block_design_wrapper.bd
 --Design      : Block_design_wrapper
@@ -70,11 +70,11 @@ architecture STRUCTURE of Block_design_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     Vaux14_v_n : in STD_LOGIC;
     Vaux14_v_p : in STD_LOGIC;
-    pwm0 : out STD_LOGIC;
     B_In : in STD_LOGIC;
     A_In : in STD_LOGIC;
+    b : out STD_LOGIC;
     o_pwm : out STD_LOGIC;
-    b : out STD_LOGIC
+    pwm0 : out STD_LOGIC
   );
   end component Block_design;
 begin

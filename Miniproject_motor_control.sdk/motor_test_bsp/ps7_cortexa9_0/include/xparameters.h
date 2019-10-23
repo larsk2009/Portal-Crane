@@ -124,17 +124,6 @@
 
 /******************************************************************/
 
-/* Definitions for driver ENCODER */
-#define XPAR_ENCODER_NUM_INSTANCES 1
-
-/* Definitions for peripheral ENCODER_0 */
-#define XPAR_ENCODER_0_DEVICE_ID 0
-#define XPAR_ENCODER_0_S00_AXI_BASEADDR 0xFFFFFFFF
-#define XPAR_ENCODER_0_S00_AXI_HIGHADDR 0x00000000
-
-
-/******************************************************************/
-
 
 /* Definitions for peripheral PS7_AFI_0 */
 #define XPAR_PS7_AFI_0_S_AXI_BASEADDR 0xF8008000
@@ -231,24 +220,54 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 1
+#define XPAR_XGPIO_NUM_INSTANCES 3
 
-/* Definitions for peripheral AXI_GPIO_0 */
-#define XPAR_AXI_GPIO_0_BASEADDR 0x41200000
-#define XPAR_AXI_GPIO_0_HIGHADDR 0x4120FFFF
-#define XPAR_AXI_GPIO_0_DEVICE_ID 0
-#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_0_IS_DUAL 0
+/* Definitions for peripheral ADCIN_ADCOUT */
+#define XPAR_ADCIN_ADCOUT_BASEADDR 0x41220000
+#define XPAR_ADCIN_ADCOUT_HIGHADDR 0x4122FFFF
+#define XPAR_ADCIN_ADCOUT_DEVICE_ID 0
+#define XPAR_ADCIN_ADCOUT_INTERRUPT_PRESENT 0
+#define XPAR_ADCIN_ADCOUT_IS_DUAL 1
+
+
+/* Definitions for peripheral COUNTERIN_COUNTEROUT */
+#define XPAR_COUNTERIN_COUNTEROUT_BASEADDR 0x41210000
+#define XPAR_COUNTERIN_COUNTEROUT_HIGHADDR 0x4121FFFF
+#define XPAR_COUNTERIN_COUNTEROUT_DEVICE_ID 1
+#define XPAR_COUNTERIN_COUNTEROUT_INTERRUPT_PRESENT 0
+#define XPAR_COUNTERIN_COUNTEROUT_IS_DUAL 1
+
+
+/* Definitions for peripheral MUXOUT_RESETOUT */
+#define XPAR_MUXOUT_RESETOUT_BASEADDR 0x41200000
+#define XPAR_MUXOUT_RESETOUT_HIGHADDR 0x4120FFFF
+#define XPAR_MUXOUT_RESETOUT_DEVICE_ID 2
+#define XPAR_MUXOUT_RESETOUT_INTERRUPT_PRESENT 0
+#define XPAR_MUXOUT_RESETOUT_IS_DUAL 1
 
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral AXI_GPIO_0 */
-#define XPAR_GPIO_0_BASEADDR 0x41200000
-#define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
+/* Canonical definitions for peripheral ADCIN_ADCOUT */
+#define XPAR_GPIO_0_BASEADDR 0x41220000
+#define XPAR_GPIO_0_HIGHADDR 0x4122FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_ADCIN_ADCOUT_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_0_IS_DUAL 0
+#define XPAR_GPIO_0_IS_DUAL 1
+
+/* Canonical definitions for peripheral COUNTERIN_COUNTEROUT */
+#define XPAR_GPIO_1_BASEADDR 0x41210000
+#define XPAR_GPIO_1_HIGHADDR 0x4121FFFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_COUNTERIN_COUNTEROUT_DEVICE_ID
+#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_1_IS_DUAL 1
+
+/* Canonical definitions for peripheral MUXOUT_RESETOUT */
+#define XPAR_GPIO_2_BASEADDR 0x41200000
+#define XPAR_GPIO_2_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_MUXOUT_RESETOUT_DEVICE_ID
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_2_IS_DUAL 1
 
 
 /******************************************************************/
