@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Fri Oct 25 11:09:21 UTC 2019
+VLNV: xilinx.com:ip:de_lastig_ip:1.0
+SynthRuntime: 78

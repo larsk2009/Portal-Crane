@@ -12,14 +12,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_pw
 # IP: bd/Block_design/ip/Block_design_axi_timer_0_0_1/Block_design_axi_timer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_axi_timer_0_0 || ORIG_REF_NAME==Block_design_axi_timer_0_0} -quiet] -quiet
 
-# IP: bd/Block_design/ip/Block_design_processing_system7_0_0/Block_design_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_processing_system7_0_0 || ORIG_REF_NAME==Block_design_processing_system7_0_0} -quiet] -quiet
-
 # IP: bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_rst_ps7_0_50M_0 || ORIG_REF_NAME==Block_design_rst_ps7_0_50M_0} -quiet] -quiet
-
-# IP: bd/Block_design/ip/Block_design_xlconstant_1_0_1/Block_design_xlconstant_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_xlconstant_1_0 || ORIG_REF_NAME==Block_design_xlconstant_1_0} -quiet] -quiet
 
 # IP: bd/Block_design/ip/Block_design_xlconstant_3_0_1/Block_design_xlconstant_3_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_xlconstant_3_0 || ORIG_REF_NAME==Block_design_xlconstant_3_0} -quiet] -quiet
@@ -39,17 +33,26 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_ax
 # IP: bd/Block_design/ip/Block_design_counter_0_0/Block_design_counter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_counter_0_0 || ORIG_REF_NAME==Block_design_counter_0_0} -quiet] -quiet
 
-# IP: bd/Block_design/ip/Block_design_ps7_0_axi_periph_0_1/Block_design_ps7_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==Block_design_ps7_0_axi_periph_0} -quiet] -quiet
-
 # IP: bd/Block_design/ip/Block_design_axi_gpio_1_0_1/Block_design_axi_gpio_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_axi_gpio_1_0 || ORIG_REF_NAME==Block_design_axi_gpio_1_0} -quiet] -quiet
 
 # IP: bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_axi_gpio_0_1 || ORIG_REF_NAME==Block_design_axi_gpio_0_1} -quiet] -quiet
 
-# IP: bd/Block_design/ip/Block_design_xbar_0_1/Block_design_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_xbar_0 || ORIG_REF_NAME==Block_design_xbar_0} -quiet] -quiet
+# IP: bd/Block_design/ip/Block_design_xlconstant_0_0_1/Block_design_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_xlconstant_0_0 || ORIG_REF_NAME==Block_design_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/Block_design/ip/Block_design_processing_system7_0_1_1/Block_design_processing_system7_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_processing_system7_0_1 || ORIG_REF_NAME==Block_design_processing_system7_0_1} -quiet] -quiet
+
+# IP: bd/Block_design/ip/Block_design_acs_crane_ip_0_0/Block_design_acs_crane_ip_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_acs_crane_ip_0_0 || ORIG_REF_NAME==Block_design_acs_crane_ip_0_0} -quiet] -quiet
+
+# IP: bd/Block_design/ip/Block_design_ps7_0_axi_periph_1/Block_design_ps7_0_axi_periph_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_ps7_0_axi_periph_1 || ORIG_REF_NAME==Block_design_ps7_0_axi_periph_1} -quiet] -quiet
+
+# IP: bd/Block_design/ip/Block_design_xbar_1_1/Block_design_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_xbar_1 || ORIG_REF_NAME==Block_design_xbar_1} -quiet] -quiet
 
 # IP: bd/Block_design/ip/Block_design_auto_pc_0/Block_design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Block_design_auto_pc_0 || ORIG_REF_NAME==Block_design_auto_pc_0} -quiet] -quiet

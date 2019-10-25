@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Oct 22 19:33:44 2019
+-- Date        : Wed Oct 23 19:22:00 2019
 -- Host        : MSI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xadc_wiz_0_0/Block_design_xadc_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Block_design_xadc_wiz_0_0 -prefix
+--               Block_design_xadc_wiz_0_0_ Block_design_xadc_wiz_0_0_sim_netlist.vhdl
 -- Design      : Block_design_xadc_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,8 +31,6 @@ entity Block_design_xadc_wiz_0_0_drp_to_axi4stream is
     CHANNEL : in STD_LOGIC_VECTOR ( 4 downto 0 );
     den_o_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Block_design_xadc_wiz_0_0_drp_to_axi4stream : entity is "drp_to_axi4stream";
 end Block_design_xadc_wiz_0_0_drp_to_axi4stream;
 
 architecture STRUCTURE of Block_design_xadc_wiz_0_0_drp_to_axi4stream is
@@ -540,8 +538,6 @@ entity Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp is
     vauxp14 : in STD_LOGIC;
     m_axis_resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp : entity is "Block_design_xadc_wiz_0_0_xadc_core_drp";
 end Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp;
 
 architecture STRUCTURE of Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp is
@@ -675,8 +671,6 @@ entity Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc is
     vp_in : in STD_LOGIC;
     vn_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc : entity is "Block_design_xadc_wiz_0_0_axi_xadc";
 end Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc;
 
 architecture STRUCTURE of Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc is

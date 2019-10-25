@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Oct 23 11:29:48 2019
+-- Date        : Wed Oct 23 19:22:08 2019
 -- Host        : MSI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Block_design_axi_gpio_0_1 -prefix
+--               Block_design_axi_gpio_0_1_ Block_design_axi_gpio_0_1_stub.vhdl
 -- Design      : Block_design_axi_gpio_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

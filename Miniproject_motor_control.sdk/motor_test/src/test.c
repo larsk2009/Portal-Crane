@@ -28,7 +28,6 @@
 #include <xgpio.h>
 
 /************************** Constant Definitions *****************************/
-#define encoder_base 0x43C00000
 
 /**************************** Type Definitions *******************************/
 
@@ -132,20 +131,20 @@ void DriveTo(uint32_t value) {
 
 	if(currentValue > value) {
 		if(DriveHighDutyCycle) {
-			DriveMotor(30);
+			DriveMotor(35);
 		} else {
-			DriveMotor(70);
+			DriveMotor(60);
 		}
 	} else {
 		if(DriveHighDutyCycle) {
-			DriveMotor(70);
+			DriveMotor(60);
 		} else {
-			DriveMotor(30);
+			DriveMotor(35);
 		}
 	}
 
 	uint32_t data = 0;
-	uint32_t margin = 100;
+	uint32_t margin = 0;
 
 	do {
 		//usleep(10);
@@ -165,15 +164,29 @@ int main(void)
 	XGpio_SetDataDirection(&mux_reset, 1, 0);
 	XGpio_SetDataDirection(&mux_reset, 2, 0);
 	XGpio_SetDataDirection(&counter, 1, 1);
-	//XGpio_DiscreteWrite(&mux_reset, 1, 1); // mux to adc value
+	XGpio_SetDataDirection(&counter, 2, 0);
+	XGpio_SetDataDirection(&adc, 1, 1);
+	XGpio_SetDataDirection(&adc, 2, 0);
+	uint32_t theta = XGpio_DiscreteRead(&adc, 2);
+	XGpio_DiscreteWrite(&adc, 2, theta);
+	XGpio_DiscreteWrite(&mux_reset, 1, 1); // mux to adc value
 	XGpio_DiscreteWrite(&mux_reset, 1, 0); // mux to self controlled pwm
 
 	ResetCounter();
 
 	uint32_t maxValue = CalibrateCrane();
+	xil_printf("Encoder max :%d\r\n", maxValue);
 	DriveTo(maxValue / 2);
 
 	int data = 0;
+
+	data = XGpio_DiscreteRead(&counter, 1);
+	xil_printf("Encoder halv :%d\r\n", data);
+	XGpio_DiscreteWrite(&counter, 2, data);
+
+	usleep(1000000);
+
+	XGpio_DiscreteWrite(&mux_reset, 1, 1);
 
 	while(true);
 	while(1) {

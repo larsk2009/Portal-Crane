@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Oct 22 14:27:43 2019
+// Date        : Tue Oct 22 19:33:43 2019
 // Host        : MSI running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xadc_wiz_0_0/Block_design_xadc_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Block_design_xadc_wiz_0_0 -prefix
+//               Block_design_xadc_wiz_0_0_ Block_design_xadc_wiz_0_0_sim_netlist.v
 // Design      : Block_design_xadc_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -84,7 +84,6 @@ module Block_design_xadc_wiz_0_0
         .vp_in(vp_in));
 endmodule
 
-(* ORIG_REF_NAME = "Block_design_xadc_wiz_0_0_axi_xadc" *) 
 module Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc
    (s_axis_aclk,
     m_axis_aclk,
@@ -155,7 +154,6 @@ module Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_axi_xadc
         .vp_in(vp_in));
 endmodule
 
-(* ORIG_REF_NAME = "Block_design_xadc_wiz_0_0_xadc_core_drp" *) 
 module Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp
    (m_axis_tdata,
     m_axis_tid,
@@ -221,7 +219,7 @@ module Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp
   XADC #(
     .INIT_40(16'h801E),
     .INIT_41(16'h310F),
-    .INIT_42(16'h0400),
+    .INIT_42(16'h0200),
     .INIT_43(16'h0000),
     .INIT_44(16'h0000),
     .INIT_45(16'h0000),
@@ -297,7 +295,6 @@ module Block_design_xadc_wiz_0_0_Block_design_xadc_wiz_0_0_xadc_core_drp
         .s_axis_aclk(s_axis_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "drp_to_axi4stream" *) 
 module Block_design_xadc_wiz_0_0_drp_to_axi4stream
    (m_axis_tdata,
     AR,

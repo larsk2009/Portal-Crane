@@ -39,7 +39,6 @@ read_vhdl -library xil_defaultlib D:/EAAES/Portal-Crane/Miniproject_motor_contro
 add_files D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_timer_0_0_1/Block_design_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_timer_0_0_1/Block_design_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_processing_system7_0_0/Block_design_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_rst_ps7_0_50M_0/Block_design_rst_ps7_0_50M_0_ooc.xdc]
@@ -54,7 +53,8 @@ set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_axi_gpio_0_1/Block_design_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_0_1/Block_design_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_processing_system7_0_1_1/Block_design_processing_system7_0_1.xdc]
+set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_xbar_1_1/Block_design_xbar_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_auto_pc_0/Block_design_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design_ooc.xdc]
 
