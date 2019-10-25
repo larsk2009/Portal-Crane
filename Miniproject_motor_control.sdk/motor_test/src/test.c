@@ -13,6 +13,7 @@
 #include "xtmrctr.h"
 #include "xparameters.h"
 #include "xil_exception.h"
+#include "sleep.h"
 
 #ifdef XPAR_INTC_0_DEVICE_ID
 #include "xintc.h"
@@ -22,48 +23,23 @@
 #include "xil_printf.h"
 #endif
 
-#include "CraneDriver/CraneDriver.h"
+#include "MotorDriver/MotorDriver.h"
+#include "Encoder/encoder.h"
+#include <xgpio.h>
 
 /************************** Constant Definitions *****************************/
-/*
- * The following constants map to the XPAR parameters created in the
- * xparameters.h file. They are only defined here such that a user can easily
- * change all the needed parameters in one place.
- */
-#define TMRCTR_DEVICE_ID        XPAR_TMRCTR_0_DEVICE_ID
-
-#ifdef XPAR_INTC_0_DEVICE_ID
-#define INTC_DEVICE_ID          XPAR_INTC_0_DEVICE_ID
-#define INTC                    XIntc
-#define INTC_HANDLER            XIntc_InterruptHandler
-#else
-#define INTC_DEVICE_ID          XPAR_SCUGIC_SINGLE_DEVICE_ID
-#define INTC                    XScuGic
-#define INTC_HANDLER            XScuGic_InterruptHandler
-#endif /* XPAR_INTC_0_DEVICE_ID */
-
-#define PWM_PERIOD              66000    	 /* PWM period in (500 ms) */
-#define TMRCTR_0                0            /* Timer 0 ID */
-#define TMRCTR_1                1            /* Timer 1 ID */
-#define CYCLE_PER_DUTYCYCLE     10           /* Clock cycles per duty cycle */
-#define MAX_DUTYCYCLE           100          /* Max duty cycle */
-#define DUTYCYCLE_DIVISOR       50            /* Duty cycle Divisor */
-#define WAIT_COUNT              PWM_PERIOD   /* Interrupt wait counter */
 
 /**************************** Type Definitions *******************************/
 
 /***************** Macros (Inline Functions) Definitions *********************/
 
 /************************** Function Prototypes ******************************/
-int TmrCtrPwmExample(XTmrCtr *InstancePtr, u16 DeviceId);
 
 /************************** Variable Definitions *****************************/
-INTC InterruptController;  /* The instance of the Interrupt Controller */
-XTmrCtr TimerCounterInst;  /* The instance of the Timer Counter */
 
 /*****************************************************************************/
 /**
-* This function is the main function of the Tmrctr PWM example.
+* This function is the main function of the motor test example.
 *
 * @param	None.
 *
@@ -73,100 +49,164 @@ XTmrCtr TimerCounterInst;  /* The instance of the Timer Counter */
 * @note		None.
 *
 ******************************************************************************/
-int main(void)
-{
-	int Status;
+static XGpio mux_reset;
+static XGpio counter;
+static XGpio adc;
 
-	InitializeCraneDriver();
+static bool DriveHighDutyCycle = false;
 
-	while(1) {
-		sleep(10);
-		DriveCrane(DriveLeft, 100);
-		sleep(10);
-		DriveCrane(DriveRight, 100);
-	}
-
-	/* Run the Timer Counter PWM example
-	Status = TmrCtrPwmExample(&TimerCounterInst, TMRCTR_DEVICE_ID);
-	if (Status != XST_SUCCESS) {
-		xil_printf("Tmrctr PWM Example Failed\r\n");
-		return XST_FAILURE;
-	}
-
-	xil_printf("Successfully ran Tmrctr PWM Example\r\n");
-	return XST_SUCCESS;*/
+void ResetCounter() {
+	XGpio_DiscreteWrite(&mux_reset, 2, 0);
+	usleep(100);
+	XGpio_DiscreteWrite(&mux_reset, 2, 1);
 }
 
-/*****************************************************************************/
-/**
-* This function demonstrates the use of tmrctr PWM APIs.
-*
-* @param	IntcInstancePtr is a pointer to the Interrupt Controller
-*		driver Instance
-* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance
-* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
-*		xparameters.h
-* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_INTERRUPT_INTR
-*		value from xparameters.h
-*
-* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE
-*
-* @note		none.
-*
-*****************************************************************************/
-int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr, u16 DeviceId)
+uint32_t CalibrateCrane() {
+	DriveMotor(50);
+
+	DriveMotor(70);
+
+	uint32_t data = 0, lastData = 0;
+
+	do {
+		lastData = data;
+		usleep(100000);
+		data = XGpio_DiscreteRead(&counter, 1);
+	} while(data != lastData);
+
+	DriveMotor(50);
+	ResetCounter();
+	DriveMotor(30);
+	usleep(3000000);
+	uint32_t value = XGpio_DiscreteRead(&counter, 1);
+	DriveMotor(70);
+	usleep(1000000);
+	DriveMotor(50);
+	uint32_t value2 = XGpio_DiscreteRead(&counter, 1);
+
+	bool side = value2 > value;
+
+	DriveHighDutyCycle = side;
+	if(side) {
+		//Andere kant
+		DriveMotor(30);
+	} else {
+		//zelfde kant
+		DriveMotor(70);
+	}
+
+	data = 0, lastData = 0;
+
+	do {
+		lastData = data;
+		usleep(100000);
+		data = XGpio_DiscreteRead(&counter, 1);
+	} while(data != lastData);
+
+	DriveMotor(50);
+	ResetCounter();
+
+	if(side) {
+		DriveMotor(70);
+	} else {
+		DriveMotor(30);
+	}
+
+	data = 0, lastData = 0;
+
+	do {
+		lastData = data;
+		usleep(100000);
+		data = XGpio_DiscreteRead(&counter, 1);
+	} while(data != lastData);
+
+	DriveMotor(50);
+	return data;
+}
+
+void DriveTo(uint32_t value) {
+	uint32_t currentValue = XGpio_DiscreteRead(&counter, 1);
+
+	if(currentValue == value) return;
+
+	if(currentValue > value) {
+		if(DriveHighDutyCycle) {
+			DriveMotor(35);
+		} else {
+			DriveMotor(60);
+		}
+	} else {
+		if(DriveHighDutyCycle) {
+			DriveMotor(60);
+		} else {
+			DriveMotor(35);
+		}
+	}
+
+	uint32_t data = 0;
+	uint32_t margin = 0;
+
+	do {
+		//usleep(10);
+		data = XGpio_DiscreteRead(&counter, 1);
+		//xil_printf("Encoder :%d\r\n", data);
+	} while(data < value - margin || data > value + margin);
+	DriveMotor(50);
+}
+
+int main(void)
 {
-	u8  DutyCycle;
-	u8  Div;
-	u32 Period;
-	u32 HighTime;
-	int Status;
+	InitializeMotorDriver(50, 15000);
+	XGpio_Initialize(&mux_reset, XPAR_MUXOUT_RESETOUT_DEVICE_ID);
+	XGpio_Initialize(&counter, XPAR_COUNTERIN_COUNTEROUT_DEVICE_ID);
+	XGpio_Initialize(&adc, XPAR_ADCIN_ADCOUT_DEVICE_ID);
 
-	/*
-	 * Initialize the timer counter so that it's ready to use,
-	 * specify the device ID that is generated in xparameters.h
-	 */
-	Status = XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId);
-	if (Status != XST_SUCCESS)
-	{
-		return XST_FAILURE;
+	XGpio_SetDataDirection(&mux_reset, 1, 0);
+	XGpio_SetDataDirection(&mux_reset, 2, 0);
+	XGpio_SetDataDirection(&counter, 1, 1);
+	XGpio_SetDataDirection(&counter, 2, 0);
+	XGpio_SetDataDirection(&adc, 1, 1);
+	XGpio_SetDataDirection(&adc, 2, 0);
+	uint32_t theta = XGpio_DiscreteRead(&adc, 2);
+	XGpio_DiscreteWrite(&adc, 2, theta);
+	XGpio_DiscreteWrite(&mux_reset, 1, 1); // mux to adc value
+	XGpio_DiscreteWrite(&mux_reset, 1, 0); // mux to self controlled pwm
+
+	ResetCounter();
+
+	uint32_t maxValue = CalibrateCrane();
+	xil_printf("Encoder max :%d\r\n", maxValue);
+	DriveTo(maxValue / 2);
+
+	int data = 0;
+
+	data = XGpio_DiscreteRead(&counter, 1);
+	xil_printf("Encoder halv :%d\r\n", data);
+	XGpio_DiscreteWrite(&counter, 2, data);
+
+	usleep(1000000);
+
+	XGpio_DiscreteWrite(&mux_reset, 1, 1);
+
+	while(true);
+	while(1) {
+		DriveMotor(20);
+		for(uint8_t i = 0; i < 20; i++)
+		{
+			usleep(100000);
+			uint32_t data = XGpio_DiscreteRead(&counter, 1);
+			xil_printf("Encoder :%d\r\n", data);
+			//data = ENCODER_mReadReg(0x43C00000, ENCODER_S00_AXI_SLV_REG0_OFFSET);
+			//xil_printf("REG0 :%d\r\n", data);
+		}
+		DriveMotor(80);
+		for(uint8_t i = 0; i < 20; i++)
+		{
+			usleep(100000);
+			uint32_t data = XGpio_DiscreteRead(&counter, 1);
+			xil_printf("Encoder :%d\r\n", data);
+			//data = ENCODER_mReadReg(0x43C00000, ENCODER_S00_AXI_SLV_REG0_OFFSET);
+			//xil_printf("REG0 :%d\r\n", data);
+		}
 	}
-
-	/*
-	 * Perform a self-test to ensure that the hardware was built
-	 * correctly. Timer0 is used for self test
-	 */
-	Status = XTmrCtr_SelfTest(TmrCtrInstancePtr, TMRCTR_0);
-	if (Status != XST_SUCCESS)
-	{
-		return XST_FAILURE;
-	}
-
-	/*
-	 * We start with the fixed divisor and after every CYCLE_PER_DUTYCYCLE
-	 * decrement the divisor by 1, as a result Duty cycle increases
-	 * proportionally. This is done until duty cycle is reached upto
-	 * MAX_DUTYCYCLE
-	 */
-	Div = DUTYCYCLE_DIVISOR;
-
-	/* Disable PWM for reconfiguration */
-	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
-
-	/* Configure PWM */
-	Period = PWM_PERIOD;
-	HighTime = PWM_PERIOD *0.6;
-	DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
-
-	xil_printf("PWM Configured for Duty Cycle = %d\r\n", DutyCycle);
-
-	/* Enable PWM */
-	XTmrCtr_PwmEnable(TmrCtrInstancePtr);
-
-	while(1)
-	{
-
-	}
-
-	return Status;
 }

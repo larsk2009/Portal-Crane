@@ -1,0 +1,470 @@
+
+*** Running vivado
+    with args -log Block_design_acs_crane_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Block_design_acs_crane_ip_0_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Block_design_acs_crane_ip_0_0.tcl -notrace
+Command: synth_design -top Block_design_acs_crane_ip_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3904 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 385.016 ; gain = 102.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Block_design_acs_crane_ip_0_0' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_acs_crane_ip_0_0/synth/Block_design_acs_crane_ip_0_0.vhd:68]
+INFO: [Synth 8-3491] module 'acs_crane_ip' declared at 'd:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip.vhd:29' bound to instance 'U0' of component 'acs_crane_ip' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_acs_crane_ip_0_0/synth/Block_design_acs_crane_ip_0_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'acs_crane_ip' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip.vhd:41]
+INFO: [Synth 8-3491] module 'acs_crane_ip_reset_sync' declared at 'd:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_reset_sync.vhd:22' bound to instance 'u_acs_crane_ip_reset_sync_inst' of component 'acs_crane_ip_reset_sync' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'acs_crane_ip_reset_sync' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_reset_sync.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'acs_crane_ip_reset_sync' (1#1) [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_reset_sync.vhd:30]
+INFO: [Synth 8-3491] module 'acs_crane_ip_dut' declared at 'd:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_dut.vhd:22' bound to instance 'u_acs_crane_ip_dut_inst' of component 'acs_crane_ip_dut' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'acs_crane_ip_dut' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_dut.vhd:36]
+INFO: [Synth 8-3491] module 'acs_crane_ip_src_Subsystem1' declared at 'd:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:42' bound to instance 'u_acs_crane_ip_src_Subsystem1' of component 'acs_crane_ip_src_Subsystem1' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_dut.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'acs_crane_ip_src_Subsystem1' [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[0,0]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[1,0]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[2,0]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[3,0]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[0,1]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[1,1]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[2,1]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'MatrixGainConstt_1_reg[3,1]' and it is trimmed from '16' to '10' bits. [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:396]
+INFO: [Synth 8-256] done synthesizing module 'acs_crane_ip_src_Subsystem1' (2#1) [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'acs_crane_ip_dut' (3#1) [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_dut.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'acs_crane_ip' (4#1) [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Block_design_acs_crane_ip_0_0' (5#1) [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ip/Block_design_acs_crane_ip_0_0/synth/Block_design_acs_crane_ip_0_0.vhd:68]
+WARNING: [Synth 8-3331] design acs_crane_ip_src_Subsystem1 has unconnected port desired_angle[15]
+WARNING: [Synth 8-3331] design acs_crane_ip_src_Subsystem1 has unconnected port angle[15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 440.195 ; gain = 157.344
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 440.195 ; gain = 157.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 440.195 ; gain = 157.344
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 764.508 ; gain = 2.742
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 764.508 ; gain = 481.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 764.508 ; gain = 481.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 764.508 ; gain = 481.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 764.508 ; gain = 481.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     28 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 5     
+	   3 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 6     
+	   3 Input     15 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 4     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module acs_crane_ip_reset_sync 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module acs_crane_ip_src_Subsystem1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     28 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 5     
+	   3 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 6     
+	   3 Input     15 Bit       Adders := 1     
+	   2 Input     15 Bit       Adders := 4     
++---Registers : 
+	               16 Bit    Registers := 4     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:347]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:301]
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_2, operation Mode is: A*(B:0x3fe3).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_1, operation Mode is: (A:0x401a)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_1.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp_1, operation Mode is: A*(B:0xa4).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp_1.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp, operation Mode is: A*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp, operation Mode is: (A:0x1bf0c)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1bf0c)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain2_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_1, operation Mode is: A*(B:0x151).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_1.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_2, operation Mode is: A*(B:0x69).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_2, operation Mode is: A*(B:0x1b5).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_2, operation Mode is: (A:0x5698)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_2, operation Mode is: A*(B:0x3ff46).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_1, operation Mode is: A*(B:0x2546).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_1.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp, operation Mode is: A*(B:0x3ffb6).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp, operation Mode is: A*(B:0x13f6).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_2_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp, operation Mode is: (A:0x401a)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_3_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp, operation Mode is: A*(B:0x3ff70).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp, operation Mode is: (A:0x568c)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_3, operation Mode is: (A:0x5cfb)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_3 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp_3.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_3, operation Mode is: A*(B:0xa4).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_3 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain6_dotp_1_mul_temp_3.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_3, operation Mode is: A*(B:0x151).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_3 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/mul_Gain8_dotp_0_mul_temp_3.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp, operation Mode is: A*(B:0x34).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain5_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp, operation Mode is: A*(B:0x3d769).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp, operation Mode is: C+A*(B:0x3e5ef).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_1, operation Mode is: PCIN+(A:0x5f81)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_1 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_1.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_1.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_2, operation Mode is: PCIN+A*(B:0x12a8).
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_2 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_2.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_mul_temp_3 is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain3_add_temp_2.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp, operation Mode is: A*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp, operation Mode is: (A:0x1bf0c)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1bf0c)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain1_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain_mul_temp, operation Mode is: (A:0x7b1a)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Gain_mul_temp.
+DSP Report: Generating DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Multiply_mul_temp, operation Mode is: (A:0x8312)*B.
+DSP Report: operator U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Multiply_mul_temp is absorbed into DSP U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Multiply_mul_temp.
+WARNING: [Synth 8-3331] design Block_design_acs_crane_ip_0_0 has unconnected port desired_angle[15]
+WARNING: [Synth 8-3331] design Block_design_acs_crane_ip_0_0 has unconnected port angle[15]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 764.508 ; gain = 481.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                   | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|acs_crane_ip_src_Subsystem1   | A*(B:0x3fe3)             | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x401a)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0xa4)               | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (PCIN>>17)+A*B           | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (A:0x1bf0c)*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (PCIN>>17)+(A:0x1bf0c)*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x151)              | 16     | 10     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x69)               | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x1b5)              | 16     | 10     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x5698)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x3ff46)            | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x2546)             | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x3ffb6)            | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x13f6)             | 16     | 14     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x401a)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x3ff70)            | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x568c)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x5cfb)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0xa4)               | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x151)              | 16     | 10     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x34)               | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | A*(B:0x3d769)            | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | C+A*(B:0x3e5ef)          | 16     | 14     | 29     | -      | 29     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | PCIN+(A:0x5f81)*B        | 16     | 16     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | PCIN+A*(B:0x12a8)        | 16     | 14     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | A*B                      | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (PCIN>>17)+A*B           | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (A:0x1bf0c)*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Block_design_acs_crane_ip_0_0 | (PCIN>>17)+(A:0x1bf0c)*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x7b1a)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acs_crane_ip_src_Subsystem1   | (A:0x8312)*B             | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 821.117 ; gain = 538.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 821.879 ; gain = 539.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/8fdd/hdl/vhdl/acs_crane_ip_src_Subsystem1.vhd:614]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \Unit_Delay2_out1_reg[1] [15] is driving 60 big block pins (URAM, BRAM and DSP loads). Created 6 replicas of its driver. 
+INFO: [Synth 8-6064] Net \Unit_Delay2_out1_reg[2] [15] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \Unit_Delay2_out1_reg[3] [15] is driving 45 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-3332] Sequential element (U0/u_acs_crane_ip_dut_inst/u_acs_crane_ip_src_Subsystem1/Unit_Delay2_out1_reg[1][15]) is unused and will be removed from module Block_design_acs_crane_ip_0_0.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   108|
+|2     |DSP48E1   |    31|
+|3     |DSP48E1_1 |     1|
+|4     |LUT1      |    28|
+|5     |LUT2      |   314|
+|6     |LUT3      |    29|
+|7     |LUT4      |    33|
+|8     |LUT5      |     7|
+|9     |LUT6      |    28|
+|10    |FDCE      |    79|
+|11    |FDPE      |     2|
++------+----------+------+
+
+Report Instance Areas: 
++------+------------------------------------+----------------------------+------+
+|      |Instance                            |Module                      |Cells |
++------+------------------------------------+----------------------------+------+
+|1     |top                                 |                            |   660|
+|2     |  U0                                |acs_crane_ip                |   660|
+|3     |    u_acs_crane_ip_dut_inst         |acs_crane_ip_dut            |   657|
+|4     |      u_acs_crane_ip_src_Subsystem1 |acs_crane_ip_src_Subsystem1 |   657|
+|5     |    u_acs_crane_ip_reset_sync_inst  |acs_crane_ip_reset_sync     |     3|
++------+------------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 833.563 ; gain = 226.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 833.563 ; gain = 550.711
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 140 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 833.563 ; gain = 558.637
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/Block_design_acs_crane_ip_0_0_synth_1/Block_design_acs_crane_ip_0_0.dcp' has been generated.

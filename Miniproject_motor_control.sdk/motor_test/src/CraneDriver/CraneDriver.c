@@ -27,7 +27,8 @@ bool DriveCrane(MotorDirection direction, double speed) {
 	double dir = 0;
 	if(direction == DriveLeft) {
 		dir = -1.0;
-	} else {
+	}
+	else if(direction == DriveRight) {
 		dir = 1.0;
 	}
 

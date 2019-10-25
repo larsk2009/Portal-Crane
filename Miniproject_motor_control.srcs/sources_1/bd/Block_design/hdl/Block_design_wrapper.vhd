@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Wed Oct  2 15:00:44 2019
+--Date        : Fri Oct 25 14:43:21 2019
 --Host        : MSI running 64-bit major release  (build 9200)
 --Command     : generate_target Block_design_wrapper.bd
 --Design      : Block_design_wrapper
@@ -13,6 +13,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Block_design_wrapper is
   port (
+    A_In : in STD_LOGIC;
+    B_In : in STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -34,14 +36,19 @@ entity Block_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_out : out STD_LOGIC
+    Vaux14_v_n : in STD_LOGIC;
+    Vaux14_v_p : in STD_LOGIC;
+    b : out STD_LOGIC;
+    o_pwm : out STD_LOGIC;
+    pwm0 : out STD_LOGIC
   );
 end Block_design_wrapper;
 
 architecture STRUCTURE of Block_design_wrapper is
   component Block_design is
   port (
+    Vaux14_v_n : in STD_LOGIC;
+    Vaux14_v_p : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -63,13 +70,18 @@ architecture STRUCTURE of Block_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_out : out STD_LOGIC
+    pwm0 : out STD_LOGIC;
+    B_In : in STD_LOGIC;
+    A_In : in STD_LOGIC;
+    o_pwm : out STD_LOGIC;
+    b : out STD_LOGIC
   );
   end component Block_design;
 begin
 Block_design_i: component Block_design
      port map (
+      A_In => A_In,
+      B_In => B_In,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -91,7 +103,10 @@ Block_design_i: component Block_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      btns_4bits_tri_i(3 downto 0) => btns_4bits_tri_i(3 downto 0),
-      pwm_out => pwm_out
+      Vaux14_v_n => Vaux14_v_n,
+      Vaux14_v_p => Vaux14_v_p,
+      b => b,
+      o_pwm => o_pwm,
+      pwm0 => pwm0
     );
 end STRUCTURE;

@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/ec67/hdl" --include "../../../../Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/5bb9/hdl/verilog" --include "../../../../Miniproject_motor_control.srcs/sources_1/bd/Block_design/ipshared/70fd/hdl" --include "D:/Xilinx/Vivado/2018.2/data/xilinx_vip/include" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_processing_system7_0_0/sim/Block_design_processing_system7_0_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconstant_0_0_1/sim/Block_design_xlconstant_0_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconstant_1_0_1/sim/Block_design_xlconstant_1_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconstant_3_0_1/sim/Block_design_xlconstant_3_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconstant_2_0_1/sim/Block_design_xlconstant_2_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconcat_0_0_1/sim/Block_design_xlconcat_0_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xlconstant_4_0_1/sim/Block_design_xlconstant_4_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_xbar_0/sim/Block_design_xbar_0.v" \
+"../../../../Miniproject_motor_control.ip_user_files/bd/Block_design/ip/Block_design_auto_pc_0/sim/Block_design_auto_pc_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
