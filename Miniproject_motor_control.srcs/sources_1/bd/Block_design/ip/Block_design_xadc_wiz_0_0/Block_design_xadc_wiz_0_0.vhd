@@ -55,14 +55,34 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Block_design_xadc_wiz_0_0 is
    port
    (
-  -- axi4stream master signals 
-    s_axis_aclk     : in  std_logic;
-    m_axis_aclk     : in  std_logic;
-    m_axis_resetn   : in  std_logic;                                      
-    m_axis_tdata    : out std_logic_vector(15 downto 0);
-    m_axis_tvalid   : out std_logic;
-    m_axis_tid      : out std_logic_vector(4 downto 0);
-    m_axis_tready   : in  std_logic;
+    -- System interface
+    s_axi_aclk      : in  std_logic;                                      
+    s_axi_aresetn   : in  std_logic;                                      
+    -- AXI Write address channel signals                                        
+    s_axi_awaddr    : in  std_logic_vector(10 downto 0);                  
+    s_axi_awvalid   : in  std_logic;                                      
+    s_axi_awready   : out std_logic;                                      
+    -- AXI Write data channel signals                                           
+    s_axi_wdata     : in  std_logic_vector(31 downto 0);                  
+    s_axi_wstrb     : in  std_logic_vector(3 downto 0);              
+    s_axi_wvalid    : in  std_logic;                                      
+    s_axi_wready    : out std_logic;                                      
+    -- AXI Write response channel signals                                       
+    s_axi_bresp     : out std_logic_vector(1 downto 0);                   
+    s_axi_bvalid    : out std_logic;                                      
+    s_axi_bready    : in  std_logic;                                      
+    -- AXI Read address channel signals                                         
+    s_axi_araddr    : in  std_logic_vector(10 downto 0);                  
+    s_axi_arvalid   : in  std_logic;                                      
+    s_axi_arready   : out std_logic;                                      
+    -- AXI Read address channel signals                                         
+    s_axi_rdata     : out std_logic_vector(31 downto 0);                  
+    s_axi_rresp     : out std_logic_vector(1 downto 0);                   
+    s_axi_rvalid    : out std_logic;                                      
+    s_axi_rready    : in  std_logic;                                      
+                                                                                
+   -- Input to the system from the axi_xadc core
+    ip2intc_irpt    : out std_logic;
     vauxp14         : in  STD_LOGIC;                         -- Auxiliary Channel 14
     vauxn14         : in  STD_LOGIC;
     busy_out        : out  STD_LOGIC;                        -- ADC Busy signal
@@ -78,20 +98,56 @@ end Block_design_xadc_wiz_0_0;
 architecture xilinx of Block_design_xadc_wiz_0_0 is
 
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xilinx : architecture is "Block_design_xadc_wiz_0_0,xadc_wiz_v3_3_5,{component_name=Block_design_xadc_wiz_0_0,enable_axi=false,enable_axi4stream=true,dclk_frequency=50,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
+  attribute CORE_GENERATION_INFO of xilinx : architecture is "Block_design_xadc_wiz_0_0,xadc_wiz_v3_3_5,{component_name=Block_design_xadc_wiz_0_0,enable_axi=true,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
 
 
   component Block_design_xadc_wiz_0_0_axi_xadc 
+   generic
+   (
+    -----------------------------------------
+--    C_BASEADDR              : std_logic_vector  := X"FFFF_FFFF";
+--    C_HIGHADDR              : std_logic_vector  := X"0000_0000";
+    -----------------------------------------
+    -- AXI slave single block generics
+    C_INSTANCE              : string := "Block_design_xadc_wiz_0_0_axi_xadc";
+    C_FAMILY                : string                   := "virtex7";
+    C_S_AXI_ADDR_WIDTH      : integer range 2 to 32   := 11;
+    C_S_AXI_DATA_WIDTH      : integer range 32 to 128  := 32;
+    -----------------------------------------
+    -- SYSMON Generics
+    C_INCLUDE_INTR          : integer range 0 to 1   := 1;
+    C_SIM_MONITOR_FILE      : string                 := "design.txt"
+   );
    port
    (
-  -- axi4stream master signals 
-    s_axis_aclk     : in  std_logic;
-    m_axis_aclk     : in  std_logic;
-    m_axis_resetn   : in  std_logic;                                      
-    m_axis_tdata    : out std_logic_vector(15 downto 0);
-    m_axis_tvalid   : out std_logic;
-    m_axis_tid      : out std_logic_vector(4 downto 0);
-    m_axis_tready   : in  std_logic;
+    -- System interface
+    s_axi_aclk      : in  std_logic;                                      
+    s_axi_aresetn   : in  std_logic;                                      
+    -- AXI Write address channel signals                                        
+    s_axi_awaddr    : in  std_logic_vector((C_S_AXI_ADDR_WIDTH-1) downto 0);                  
+    s_axi_awvalid   : in  std_logic;                                      
+    s_axi_awready   : out std_logic;                                      
+    -- AXI Write data channel signals                                           
+    s_axi_wdata     : in  std_logic_vector((C_S_AXI_DATA_WIDTH-1) downto 0);                  
+    s_axi_wstrb     : in  std_logic_vector(((C_S_AXI_DATA_WIDTH/8)-1) downto 0);              
+    s_axi_wvalid    : in  std_logic;                                      
+    s_axi_wready    : out std_logic;                                      
+    -- AXI Write response channel signals                                       
+    s_axi_bresp     : out std_logic_vector(1 downto 0);                   
+    s_axi_bvalid    : out std_logic;                                      
+    s_axi_bready    : in  std_logic;                                      
+    -- AXI Read address channel signals                                         
+    s_axi_araddr    : in  std_logic_vector((C_S_AXI_ADDR_WIDTH-1) downto 0);                  
+    s_axi_arvalid   : in  std_logic;                                      
+    s_axi_arready   : out std_logic;                                      
+    -- AXI Read address channel signals                                         
+    s_axi_rdata     : out std_logic_vector((C_S_AXI_DATA_WIDTH-1) downto 0);                  
+    s_axi_rresp     : out std_logic_vector(1 downto 0);                   
+    s_axi_rvalid    : out std_logic;                                      
+    s_axi_rready    : in  std_logic;                                      
+                                                                                
+   -- Input to the system from the axi_xadc core
+    ip2intc_irpt    : out std_logic;
    -- XADC External interface signals
 
     -- Conversion start control signal for Event driven mode
@@ -114,15 +170,37 @@ begin
        alarm_out <= alm_int(7);
 
    U0 : Block_design_xadc_wiz_0_0_axi_xadc 
+   generic map
+   (
+    C_INSTANCE              => "Block_design_xadc_wiz_0_0_axi_xadc",
+    C_FAMILY                => "virtex7",
+    C_S_AXI_ADDR_WIDTH      => 11,
+    C_S_AXI_DATA_WIDTH      => 32,
+    C_INCLUDE_INTR          => 1,
+    C_SIM_MONITOR_FILE      => "design.txt"
+   )
    port map
    (
-    s_axis_aclk     => s_axis_aclk,
-    m_axis_aclk     => m_axis_aclk,
-    m_axis_resetn   => m_axis_resetn,
-    m_axis_tdata    => m_axis_tdata,
-    m_axis_tvalid   => m_axis_tvalid,
-    m_axis_tid      => m_axis_tid,
-    m_axis_tready   => m_axis_tready,
+    s_axi_aclk      => s_axi_aclk,                    
+    s_axi_aresetn   => s_axi_aresetn,                    
+    s_axi_awaddr    => s_axi_awaddr,                    
+    s_axi_awvalid   => s_axi_awvalid,                    
+    s_axi_awready   => s_axi_awready,                    
+    s_axi_wdata     => s_axi_wdata,                    
+    s_axi_wstrb     => s_axi_wstrb,                    
+    s_axi_wvalid    => s_axi_wvalid,                    
+    s_axi_wready    => s_axi_wready,                    
+    s_axi_bresp     => s_axi_bresp,                    
+    s_axi_bvalid    => s_axi_bvalid,                    
+    s_axi_bready    => s_axi_bready,                    
+    s_axi_araddr    => s_axi_araddr,                    
+    s_axi_arvalid   => s_axi_arvalid,                    
+    s_axi_arready   => s_axi_arready,                    
+    s_axi_rdata     => s_axi_rdata,                    
+    s_axi_rresp     => s_axi_rresp,                    
+    s_axi_rvalid    => s_axi_rvalid,                    
+    s_axi_rready    => s_axi_rready,                    
+    ip2intc_irpt    => ip2intc_irpt,  
     vauxp14 => vauxp14,
     vauxn14 => vauxn14,
     busy_out => busy_out,

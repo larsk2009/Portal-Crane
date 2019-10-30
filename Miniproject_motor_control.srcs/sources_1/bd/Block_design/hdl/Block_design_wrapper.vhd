@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Fri Oct 25 14:43:21 2019
+--Date        : Wed Oct 30 10:14:58 2019
 --Host        : MSI running 64-bit major release  (build 9200)
 --Command     : generate_target Block_design_wrapper.bd
 --Design      : Block_design_wrapper
@@ -38,8 +38,8 @@ entity Block_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     Vaux14_v_n : in STD_LOGIC;
     Vaux14_v_p : in STD_LOGIC;
-    b : out STD_LOGIC;
-    o_pwm : out STD_LOGIC;
+    btn_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    mux : out STD_LOGIC_VECTOR ( 0 to 0 );
     pwm0 : out STD_LOGIC
   );
 end Block_design_wrapper;
@@ -47,8 +47,6 @@ end Block_design_wrapper;
 architecture STRUCTURE of Block_design_wrapper is
   component Block_design is
   port (
-    Vaux14_v_n : in STD_LOGIC;
-    Vaux14_v_p : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -70,11 +68,13 @@ architecture STRUCTURE of Block_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
+    Vaux14_v_n : in STD_LOGIC;
+    Vaux14_v_p : in STD_LOGIC;
     pwm0 : out STD_LOGIC;
     B_In : in STD_LOGIC;
     A_In : in STD_LOGIC;
-    o_pwm : out STD_LOGIC;
-    b : out STD_LOGIC
+    mux : out STD_LOGIC_VECTOR ( 0 to 0 );
+    btn_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component Block_design;
 begin
@@ -105,8 +105,8 @@ Block_design_i: component Block_design
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       Vaux14_v_n => Vaux14_v_n,
       Vaux14_v_p => Vaux14_v_p,
-      b => b,
-      o_pwm => o_pwm,
+      btn_tri_i(3 downto 0) => btn_tri_i(3 downto 0),
+      mux(0) => mux(0),
       pwm0 => pwm0
     );
 end STRUCTURE;

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Block_design_pwm_prog_0_0_synth_1" LaunchDir="D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/Block_design_pwm_prog_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Block_design_mux2_0_0_synth_1" LaunchDir="D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/Block_design_mux2_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Block_design_counter_0_0_synth_1" LaunchDir="D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/Block_design_counter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

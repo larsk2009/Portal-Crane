@@ -2,76 +2,63 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Oct  2 18:37:16 2019
-# Process ID: 9544
-# Current directory: F:/users/lars/Source/Repos/Portal-Crane
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17640 F:\users\lars\Source\Repos\Portal-Crane\Miniproject_motor_control.xpr
-# Log file: F:/users/lars/Source/Repos/Portal-Crane/vivado.log
-# Journal file: F:/users/lars/Source/Repos/Portal-Crane\vivado.jou
+# Start of session at: Mon Oct 28 10:35:52 2019
+# Process ID: 17228
+# Current directory: D:/EAAES/Portal-Crane
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23972 D:\EAAES\Portal-Crane\Miniproject_motor_control.xpr
+# Log file: D:/EAAES/Portal-Crane/vivado.log
+# Journal file: D:/EAAES/Portal-Crane\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.xpr
-INFO: [Project 1-313] Project file moved from 'D:/EAAES/Miniproject_motor_control' since last save.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_reset_sync.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_reset_sync.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Subsystem_pkg.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Subsystem_pkg.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_observer.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_observer.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Controller_DT.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Controller_DT.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Subsystem.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_src_Subsystem.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_dut.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_dut.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_pkg.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_pkg.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_addr_decoder.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_addr_decoder.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_axi_lite_module.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_axi_lite_module.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_axi_lite.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip_axi_lite.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/hdl/vhdl/model_cra_ip.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/modulator_pkg.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/modulator_pkg.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/sine_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/sine_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/pwm_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/pwm_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/frequency_trigger_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/frequency_trigger_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/counter_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/counter_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/frequency_trigger_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/frequency_trigger_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/pwm_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/pwm_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/axis_pwm.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/axis_pwm.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/counter_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/counter_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/modulator_pkg.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/modulator_pkg.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/modulator_pkg.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/modulator_pkg.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/counter_tb.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/counter_tb.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/frequency_trigger_tb.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/frequency_trigger_tb.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/hdl/modulator_axi_ip_v1_0.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/hdl/modulator_axi_ip_v1_0.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/sine_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/sine_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/modulator_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/src/modulator_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/hdl/modulator_axi_ip_v1_0_S00_AXI.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/hdl/modulator_axi_ip_v1_0_S00_AXI.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/sine_top_rtl.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/sine_top_rtl.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/pwm_tb.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/pwm_tb.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/axis_pwm_aud/src/sine_top_tb.vhd', nor could it be found using path 'D:/EAAES/EAAES_coreips/axis_pwm_aud/src/sine_top_tb.vhd'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/model_cra_ip_v1_0/include/model_cra_ip_addr.h', nor could it be found using path 'D:/EAAES/EAAES_coreips/model_cra_ip_v1_0/include/model_cra_ip_addr.h'.
-CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/users/lars/Source/Repos/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/drivers/modulator_axi_ip_v1_0/src/modulator_axi_ip.h', nor could it be found using path 'D:/EAAES/EAAES_coreips/so-logic_modulator_modulator_axi_ip_1.0/drivers/modulator_axi_ip_v1_0/src/modulator_axi_ip.h'.
+open_project D:/EAAES/Portal-Crane/Miniproject_motor_control.xpr
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'F:/users/lars/Source/Repos/EAAES_coreips', nor could it be found using path 'D:/EAAES/EAAES_coreips'.
-WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.ip_user_files', nor could it be found using path 'D:/EAAES/Miniproject_motor_control/Miniproject_motor_control.ip_user_files'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'D:/EAAES/EAAES_coreips/Encoder_v1/Decoder_1.0'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'f:/users/lars/Source/Repos/EAAES_coreips'; Can't find the specified path.
-If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 758.586 ; gain = 120.219
-update_compile_order -fileset sources_1
-open_bd_design {F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd}
-Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
-Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
-Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/EAAES/EAAES_coreips/Encoder_v1/Decoder_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/EAAES/EAAES_coreips'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 817.363 ; gain = 126.703
+open_bd_design {D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd}
 Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_3
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_2
+Adding cell -- xilinx.com:module_ref:pwm_prog:1.0 - pwm_prog_0
+Adding cell -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding cell -- xilinx.com:module_ref:mux2:1.0 - mux2_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - muxOut_resetOut
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - counterIn_counterOut
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - adcIn_adcOut
+Adding cell -- xilinx.com:module_ref:counter:1.0 - counter_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:acs_crane_ip:1.0 - acs_crane_ip_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /rst_ps7_0_50M/peripheral_aresetn(rst) and /pwm_prog_0/i_rstb(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /muxOut_resetOut/gpio2_io_o(undef) and /counter_0/Reset(rst)
 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Successfully read diagram <Block_design> from BD file <F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd>
-open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 863.523 ; gain = 99.391
-reset_run synth_2
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed Oct  2 18:39:43 2019] Launched synth_2...
-Run output will be captured here: F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/synth_2/runme.log
-[Wed Oct  2 18:39:43 2019] Launched impl_2...
-Run output will be captured here: F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2/runme.log
-open_run impl_2
-INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+Successfully read diagram <Block_design> from BD file <D:/EAAES/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd>
+open_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 929.301 ; gain = 94.898
+update_compile_order -fileset sources_1
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_3
+launch_runs impl_3 -to_step write_bitstream -jobs 8
+[Mon Oct 28 10:40:07 2019] Launched synth_3...
+Run output will be captured here: D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/synth_3/runme.log
+[Mon Oct 28 10:40:07 2019] Launched impl_3...
+Run output will be captured here: D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/impl_3/runme.log
+open_run impl_3
+INFO: [Netlist 29-17] Analyzing 233 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
 INFO: [Device 21-403] Loading part xc7z010clg400-1
@@ -83,28 +70,18 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.702 . Memory (MB): peak = 1718.363 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.712 . Memory (MB): peak = 1718.363 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.739 . Memory (MB): peak = 1814.438 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.740 . Memory (MB): peak = 1814.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1786.637 ; gain = 880.121
-file copy -force F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.runs/impl_2/Block_design_wrapper.sysdef F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+open_run: Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1877.195 ; gain = 869.262
+file copy -force D:/EAAES/Portal-Crane/Miniproject_motor_control.runs/impl_3/Block_design_wrapper.sysdef D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
 
-launch_sdk -workspace F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk -hwspec F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+launch_sdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk -hwspec F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk -hwspec D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/Block_design_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-open_bd_design {F:/users/lars/Source/Repos/Portal-Crane/Miniproject_motor_control.srcs/sources_1/bd/Block_design/Block_design.bd}
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 exit
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  2 19:54:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 28 10:46:02 2019...

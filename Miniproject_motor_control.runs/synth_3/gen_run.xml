@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_3" LaunchPart="xc7z010clg400-1" LaunchTime="1572007448">
+<GenRun Id="synth_3" LaunchPart="xc7z010clg400-1" LaunchTime="1572426913">
   <File Type="PA-TCL" Name="Block_design_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Block_design_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Block_design_wrapper_reports.tcl"/>
@@ -11,18 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="Block_design_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../EAAES_coreips/pwm.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../EAAES_coreips/mux.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../EAAES_coreips/counter.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -38,6 +26,20 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/Block_design/hdl/Block_design_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../EAAES_coreips/mux.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../EAAES_coreips/pwm.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -75,10 +77,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Block_design_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Block_design_acs_crane_ip_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Block_design_pwm_prog_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Block_design_mux2_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_axi_gpio_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Block_design_counter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Block_design_processing_system7_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_xadc_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Block_design_xbar_1"/>
 </GenRun>
