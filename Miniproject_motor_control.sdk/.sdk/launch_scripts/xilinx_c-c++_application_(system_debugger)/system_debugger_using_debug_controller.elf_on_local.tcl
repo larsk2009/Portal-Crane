@@ -12,5 +12,4 @@ rst -processor
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C9DA"} -index 0
 dow D:/EAAES/Portal-Crane/Miniproject_motor_control.sdk/controller/Debug/controller.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77C9DA"} -index 0
-con
+bpadd -addr &main
