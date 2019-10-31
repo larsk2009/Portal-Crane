@@ -126,15 +126,15 @@ void DriveTo(uint32_t value) {
 
 	if(currentValue > value) {
 		if(DriveHighDutyCycle) {
-			DriveMotor(35);
+			DriveMotor(10);
 		} else {
-			DriveMotor(60);
+			DriveMotor(90);
 		}
 	} else {
 		if(DriveHighDutyCycle) {
-			DriveMotor(60);
+			DriveMotor(90);
 		} else {
-			DriveMotor(35);
+			DriveMotor(10);
 		}
 	}
 
@@ -200,17 +200,18 @@ int main(void)
 
 	uint32_t maxValue = CalibrateCrane();
 	xil_printf("Encoder max :%d\r\n", maxValue);
-	DriveTo(maxValue - 1000);
+	DriveTo(1000);
 
 	int data = 0;
 
 	data = XGpio_DiscreteRead(&counter, 1);
 	xil_printf("Encoder halv :%d\r\n", data);
 
-	uint16_t pos0 = (double)10 * 1322.32142857142857;
-	uint16_t pos1 = (double)20 * (double)1322.32142857142857;
-	uint16_t pos2 = (double)30 * (double)1322.32142857142857;
-	uint16_t pos3 = (double)40 * (double)1322.32142857142857;
+	double value = maxValue / 56;
+	uint16_t pos0 = (double)10 * (double)value;
+	uint16_t pos1 = (double)20 * (double)value;
+	uint16_t pos2 = (double)30 * (double)value;
+	uint16_t pos3 = (double)40 * (double)value;
 
 	usleep(1000000);
 
@@ -255,13 +256,13 @@ int main(void)
 
 		int16_t pwm = rtY.pwm;
 
-		if(pwm < -100)
+		if(pwm < -50)
 		{
 			//to maxValue
 			pwm += 1000;
 			pwm = (pwm* (0.04 - 0.01)) + 10;
 		}
-		else if(pwm > 100)
+		else if(pwm > 50)
 		{
 			//to 0
 			pwm = (pwm* (0.09 - 0.070)) + 70;
@@ -277,6 +278,6 @@ int main(void)
 			old_pwm = pwm;
 		}
 
-		usleep(100);
+		usleep(1000);
 	}
 }

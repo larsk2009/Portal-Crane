@@ -82,6 +82,7 @@ void PIDcontrollerNew_step(void)
 	 *  DiscreteIntegrator: '<S32>/Integrator'
 	 *  Gain: '<S37>/Proportional Gain'
 	 */
+	// gain = -2
 	u0 = (-2 * rtb_error + rtDW.Integrator_DSTATE) + rtb_FilterCoefficient;
 
 	/* Gain: '<Root>/Gain1' incorporates:
@@ -89,9 +90,8 @@ void PIDcontrollerNew_step(void)
 	 *  Gain: '<S81>/Proportional Gain'
 	 *  Sum: '<S85>/Sum'
 	 */
-	//gain = 90
-	u0_0 = -((90 * rtb_Error + rtDW.Integrator_DSTATE_p) +
-			rtb_FilterCoefficient_i);
+	//gain = 150
+	u0_0 = -((150 * rtb_Error + rtDW.Integrator_DSTATE_p) + rtb_FilterCoefficient_i);
 
 	/* Saturate: '<Root>/Saturation5' */
 	if (u0 > 1000.0) {
